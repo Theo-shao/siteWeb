@@ -2,28 +2,27 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <!-- version contient a le navigateur IE -->
+	<!-- compatibilité  -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- keywords -->
+	<meta name="keywords" content="Auberge de jeunesse,Voyage,Reservation en ligne,Reservation d'hotel,Pratique,Location">
+	<!-- description -->
+	<meta name="description" content="YHA China广州总部在中国是发展青年旅舍事业唯一合法的权威机构。100多家各具特色的青年旅舍分布在30多个省市和地区；交通便利，环境舒适，服务体贴周到，并提供当地详尽的旅游信息。选择中国的国际青年旅舍，尽情享受您的中国之旅吧！！">
+	<!-- petit icon -->
+	<link rel="shortcut icon" href="" />
 
-	<meta name="keywords" content="auberge de jeunesse,voyage,reservation,reservation en ligne,reservation d'une chambre,reservation d'hotel,location">
-	<meta name="description" content="a">
-    <!-- petit icon -->
-	<link rel="shortcut icon" href="/favicon1.ico" />
-
+    <title>nom</title>
     
-    <title> Nom </title>
-    
-    <!-- Moteur de rendu -->
+	<!-- Moteur de rendu -->
     <meta name="renderer" content="webkit">
-
+	<!-- Interdire d'utiliser Cache de siteapp -->
     <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-    <!-- [if lte IE7]>
-        <link rel="stylesheet" href="css/ie.css">
-    <![endif] -->
     
-    <!-- lier a css -->
-    <link rel="stylesheet" href="css/app.css" />
+        <!--[if lte IE7]>
+            <link rel="stylesheet" href="css/ie.css">
+        <![endif]-->
+        <!-- <link rel="stylesheet" href="css/app.css" /> -->
      
     
     
@@ -34,7 +33,6 @@
 	var isMobile = false; 
 	for (var i=0; i<mobileAgent.length; i++)
 	{
-
 		if( browser.indexOf("ipad") != -1 && browser.indexOf("mobile") != -1 )
 		{
 			break;
@@ -42,6 +40,7 @@
 		else if( browser.indexOf(mobileAgent[i]) != -1 )
 		{
 			isMobile = true;
+			// Reorienter
 			location.href = 'http://w.yhachina.com' ;
 			break; 
 		}
@@ -49,25 +48,43 @@
 	</script>
 </head>
 <body style="filter: gray;">
-
-    <div class="header headers">        <div class="header-container">            <a class="logo" href="/"><img src="images/logo.png" alt="yha"></a>            <div class="top-user-panel">          <a href="/web-member-orderQuery" class="user-login">订单管理</a>       |                           <a href="/web-index-register" class="user-login"><img src="images/market/user-icon.png">注册</a>  | <a href="/web-index-login" class="user-login">登录</a>                                 <div class="lang">                    |                                     |
-                    <a href="/index" class="cn"><img src="images/CN.gif" alt="中文">中文</a>
-                    |
-                    <a href="/en-web-index-index" class="en"><img src="images/EN.gif" alt="English">EN</a>  </div>             </div>            <ul class="top-nav">                 <li><a href="/web-info-about">关于我们</a></li>                <li><a href="/web-member-card">会员卡</a></li>                <li><a href="/web-hostel-index">旅舍预订</a></li>                <li><a href="/web-topic-view-id-333">旅舍总览</a></li>                <li><a href="/web-info-lists">最新资讯</a></li>                <li><a href="/web-info-join">旅舍加盟</a></li>             <li><a href="/web-info-contact">联系总部</a></li>                <li><a href="/web-info-pw">旅舍公益</a></li>  <li><a href="https://weidian.com/?userid=1693834616"  target="_blank">官方小店</a></li>            </ul>        </div>    </div>    <div style="height:117px;"></div>
-
-
-
+    <div class="header headers">        
+		<div class="header-container">            
+			<a class="logo" href="/"><img src="#" alt="SCI-EUROPE"></a>            
+			<div class="top-user-panel">          
+				<a href="/web-member-orderQuery" class="user-login">Gestion de commande</a>       
+				|                           
+				<a href="/web-index-register" class="user-login"><img src="images/market/user-icon.png">S'incrire</a>  
+				| 
+				<a href="/web-index-login" class="user-login">登录</a>                                 
+				<div class="lang">                    
+				| 
+				|
+                	<a href="/index" class="cn"><img src="images/CN.gif" alt="中文">中文</a>
+                |
+                	<a href="/en-web-index-index" class="en"><img src="images/EN.gif" alt="English">EN</a>  
+				</div>             
+			</div>            
+			<ul class="top-nav">                 
+				<li><a href="/web-info-about">关于我们</a></li>                
+				<li><a href="/web-member-card">会员卡</a></li>                
+				<li><a href="/web-hostel-index">旅舍预订</a></li>                
+				<li><a href="/web-topic-view-id-333">旅舍总览</a></li>                
+				<li><a href="/web-info-lists">最新资讯</a></li>                
+				<li><a href="/web-info-join">旅舍加盟</a></li>             
+				<li><a href="/web-info-contact">联系总部</a></li>                
+				<li><a href="/web-info-pw">旅舍公益</a></li>  
+				<li><a href="https://weidian.com/?userid=1693834616"  target="_blank">官方小店</a></li>            
+			</ul>        
+		</div>    
+	</div>    
+	<div style="height:117px;"></div>
     <div class="homeSlide">
-
         <div class="fullSlide">
-
             <div class="bd">
-
                 <ul>
-
                     <li style="background-image:url(data/images/2018-07-02/5b39db2f01e23.jpg);">
-
-           <a target="_blank" href="http://mp.weixin.qq.com/s/Nz6lwg0SNQ-Z46as5v0BLg" ><img src="/images/smallimg.png" alt=""></a>                 <!--  <div class="info">
+					<a target="_blank" href="http://mp.weixin.qq.com/s/Nz6lwg0SNQ-Z46as5v0BLg" ><img src="/images/smallimg.png" alt=""></a>                 <!--  <div class="info">
 
                                 <div class="info-container">
 
