@@ -1084,9 +1084,6 @@ input {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
 }
 
-.news {
-  /*display: none;*/
-}
 
 .news .index_title {
   margin: 80px 0;
@@ -5962,9 +5959,9 @@ vertical-align:middle;
   width: 45%;
   margin-bottom: 10px;
   vertical-align:text-top;
-  //white-space: nowrap;
+  white-space: nowrap;
   overflow: hidden;
-  //text-overflow: ellipsis;
+  text-overflow: ellipsis;
 }
 
 .exhibition-item-text p a span {
@@ -6845,7 +6842,7 @@ vertical-align:middle;
 }
 
 .myorder-content ul a {
-  float: right;
+  /* float: right; */
   display: inline-block;
   width: 80px;
   height: 22px;
@@ -7950,7 +7947,7 @@ vertical-align:middle;
 }
 
 .outdoor-insurance-banner img {
-  vertical-align: middle;
+  /* vertical-align: middle; */
   display: block;
   width: 100%;
   border-radius: 5px;
