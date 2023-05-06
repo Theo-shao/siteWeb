@@ -1267,7 +1267,7 @@ input {
 
 .about_text a {
   display: block;
-  width: 100px;
+  width: 200px;
   padding: 3px 0;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
