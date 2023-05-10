@@ -1172,7 +1172,7 @@ input {
   background-image: url('../images/toureiffel.jpg');
   background-repeat: no-repeat;
   background-position: center;
-  background-color: rgba(255, 255, 255, 0.4); /* réglage du niveau de transparence à 40% */
+  background-color: rgba(255, 255, 255, 0.2); /* réglage du niveau de transparence à 40% */
 }
 
 .movie-poster {
