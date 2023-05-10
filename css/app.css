@@ -1168,8 +1168,8 @@ input {
 }
 
 .about_us {
-  height: 800px;
-  visibility: 0.4;
+  height: 1200px;
+  opacity: 0.4;
   background: url(../images/toureiffel.jpg) no-repeat center;
 }
 
