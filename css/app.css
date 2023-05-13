@@ -1011,6 +1011,7 @@ input {
 }
 
 .picScroll li a, .picScroll li img {
+  opacity: 1;
   -webkit-transition: 0.3s ease false;
   -moz-transition: 0.3s ease false false;
   -o-transition: 0.3s ease false false;
