@@ -1838,11 +1838,11 @@ input {
 }
 
 .page-box .page .next {
-  background: url(../images/page-next.gif) no-repeat center;
+  background: url(../images/market/page-next.gif) no-repeat center;
 }
 
 .page-box .page .prev {
-  background: url(../images/page-prev.gif) no-repeat center;
+  background: url(../images/market/page-prev.gif) no-repeat center;
 }
 
 .can-book-l .c-b-l-list li {
