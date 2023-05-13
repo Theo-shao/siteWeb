@@ -979,9 +979,14 @@ input {
   overflow: hidden;
 }
 
-.picScroll .prev {left: -0;background-repeat: no-repeat;}
+.picScroll .prev {background: url(../images/market/page-next.gif);
+                  left: -0;
+                  background-repeat: no-repeat;}
 
-.picScroll .next {right: -0;background-repeat: no-repeat;}
+.picScroll .next {background: url(../images/market/page-prev.gif);
+                  right: -0;
+                  background-repeat: no-repeat;}
+
 
 .picScroll .tempWrap {
   margin: 0 auto;
