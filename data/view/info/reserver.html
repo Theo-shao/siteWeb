@@ -275,53 +275,33 @@
 
     <script src="../../../js/hotel_lists.js"></script>
 
-
-
-
-
     <script type="text/javascript">
-
-        $('#Destination').kuCity();
-
-    </script>
-
-
-
-    <script type="text/javascript">
-
         showHotel(1);
     </script>
 
-
-
     <script type="text/html" id="hotelTemplate">
-
         <li class="clearfix" data-map="<%=lsLat%>, <%=lsLng%>" onclick="show_marker(<%=lsID%>);" id="list-hostel-<%=lsID%>" >
-
             <div class="left fl">
-
-                <a href="/web-hostel-detail-id-<%=lsID%>" target="_blank" ><img src="<%=lsHomeImg%>" width="220" height="150" ></a>
-
+                <a href="/web-hostel-detail-id-<%=lsID%>" target="_blank" >
+                    <img src="<%=lsHomeImg%>" width="220" height="150" >
+                </a>
             </div>
-
             <div class="right fr">
-
                 <div class="dianping">
-
                     <p class="fr">
-
-                        <a href="/web-hostel-detail-id-<%=lsID%>?tag=hostel-nav-i7" class="comment"><b></b>点评</a>
-
-                        <a href="javascript:void(0);" onclick="addfavorite(this,<%=lsID%>);" class="collection"><b></b>收藏</a>
-
+                        <a href="/web-hostel-detail-id-<%=lsID%>?tag=hostel-nav-i7" class="comment">
+                            <b></b>点评
+                        </a>
+                        <a href="javascript:void(0);" onclick="addfavorite(this,<%=lsID%>);" class="collection">
+                            <b></b>收藏
+                        </a>
                     </p>
-
-                    <h2><a href="/web-hostel-detail-id-<%=lsID%>" target="_blank" ><%=lsName%></a></h2>
-
+                    <h2>
+                        <a href="/web-hostel-detail-id-<%=lsID%>" target="_blank" ><%=lsName%>
+                        </a>
+                    </h2>
                 </div>
-
                 <p><b></b><%=lsAddress%></p>
-
 				<div class="advantage">
                     <% for (var i = 0; i < honoursArray.length; i++) { %>
 						<% if(honoursArray[i].length > 2) {%>
@@ -331,15 +311,11 @@
                 </div>
 
                 <div class="advantage">
-
                     <%=hoteldevices%>
-
                 </div>
 
                 <div class="price clearfix">
-
                     <div class="price-l fl">
-
                   <% if(bookmaxcount > 0) {%>
 				<% if(bedMinPrice > 0) {%>
 				<span>
