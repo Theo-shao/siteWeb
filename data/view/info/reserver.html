@@ -83,15 +83,15 @@
             <div class="w1080">
                 <ul class="clearfix">
                     <li class="datalist-input1">
-                        <label for="Date_a">入住日期&nbsp;&nbsp;｜</label>
+                        <label for="Date_a">Date d'arrivée&nbsp;&nbsp;｜</label>
                         <input id="Date_a" type="text" value="2023-05-30">
                     </li>
                     <li class="datalist-input2">
-                        <label for="Date_b">退房日期&nbsp;&nbsp;｜</label>
+                        <label for="Date_b">Date de départ&nbsp;&nbsp;｜</label>
                         <input id="Date_b" type="text" value="2023-05-31">
                     </li>
                     <li>
-                        <button type="submit" onclick="queryHotel(1)">搜索</button>
+                        <button type="submit" onclick="queryHotel(1)">Rechercher</button>
                     </li>
                 </ul>
             </div>
@@ -102,107 +102,59 @@
             <div class="list-screen-box">
             </div>
             <h3 class="sure-title">
-                <span id="search_cityname">广州</span>：今日共有 
-                <font id="search_hotelnum">1</font> 家旅舍可供预订
+                <span id="search_cityname">Paris</span>：il reste
+                <font id="search_hotelnum">1</font> chambres à reserver
             </h3>
             <div class="can-book-box clearfix">
-
             <!-- -左栏 旅店搜索列表- -->
-
             <div class="can-book-l fl">
-
                 <!-- -排序方式- -->
-
                 <div class="title">
-
-                    <span>排序方式：</span>
-
-                    <a href="javascript:void(0);" class="down-up" onclick="downup(this,'roomMinPrice')"><span>价格</span><b></b></a>
-
-                    <a href="javascript:void(0);" onclick="downup(this,'LsLat')"><span>距离市中心</span><b></b></a>
-
+                    <span>Trier par：</span>
+                    <a href="javascript:void(0);" class="down-up" onclick="downup(this,'roomMinPrice')">
+                        <span>prix</span>
+                        <b></b>
+                    </a>
+                    <!-- <a href="javascript:void(0);" onclick="downup(this,'LsLat')"><span>距离市中心</span><b></b></a> -->
                 </div>
-
-
-
                 <!-- -旅舍列表- -->
-
-                <ul class="c-b-l-list"><li class="clearfix" data-map="23.125121, 113.308268" onclick="show_marker(104983);" id="list-hostel-104983">
-
-            <div class="left fl">
-
-                <a href="/web-hostel-detail-id-104983" target="_blank"><img src="http://111.230.248.218:1500/fileUpload/104983/15422715974171542271597417_0.jpg" width="220" height="150"></a>
-
-            </div>
-
-            <div class="right fr">
-
-                <div class="dianping">
-
-                    <p class="fr">
-
-                        <a href="/web-hostel-detail-id-104983?tag=hostel-nav-i7" class="comment"><b></b>点评</a>
-
-                        <a href="javascript:void(0);" onclick="addfavorite(this,104983);" class="collection"><b></b>收藏</a>
-
-                    </p>
-
-                    <h2><a href="/web-hostel-detail-id-104983" target="_blank">广州东山家家青年旅舍</a></h2>
-
-                </div>
-
-                <p><b></b>广州市越秀区共和路12号-5</p>
-
-				<div class="advantage">
-                    
-						
-                    
-                </div>
-
-                <div class="advantage">
-
-                    
-
-                </div>
-
-                <div class="price clearfix">
-
-                    <div class="price-l fl">
-
-                  
+                <ul class="c-b-l-list">
+                    <li class="clearfix" data-map="23.125121, 113.308268" onclick="show_marker(104983);" id="list-hostel-104983">
+                    <div class="left fl">
+                        <a href="/web-hostel-detail-id-104983" target="_blank"><img src="http://111.230.248.218:1500/fileUpload/104983/15422715974171542271597417_0.jpg" width="220" height="150"></a>
                     </div>
-
-                    <div class="price-r fr">
-
-                        
-
-                        <a class="sold-out" href="#">已售完</a>
-
-                        
-
+                    <div class="right fr">
+                        <div class="dianping">
+                            <p class="fr">
+                                <!-- <a href="/web-hostel-detail-id-104983?tag=hostel-nav-i7" class="comment">
+                                    <b></b>点评
+                                </a>
+                                <a href="javascript:void(0);" onclick="addfavorite(this,104983);" class="collection">
+                                    <b></b>收藏
+                                </a> -->
+                            </p>
+                            <h2>
+                                <a href="#" target="_blank"></a>
+                            </h2>
+                        </div>
+                        <b></b>
+				        <div class="advantage"></div>
+                        <div class="advantage"></div>
+                        <div class="price clearfix">
+                            <div class="price-l fl">
+                            </div>
+                            <div class="price-r fr">
+                                <a class="sold-out" href="#">en rupture</a>              
+                            </div>
+                        </div>
                     </div>
-
-                </div>
-
-            </div>
-
-            <div class="divab">
-
-                
-
-                来晚了！这家旅舍的住宿在我们网站已售完
-
-                
-
-            </div>
-
-        </li></ul>
-
-
-
-                <div class="page-box clearfix" style="display: block;">
-
-                    <p class="fl">
+                    <div class="divab">
+                <!-- 来晚了！这家旅舍的住宿在我们网站已售完 -->
+                    </div>
+                </li>
+            </ul>
+            <div class="page-box clearfix" style="display: block;">
+                <p class="fl">
 
                         未找到理想的旅舍？返回
 
