@@ -58,7 +58,7 @@
                            </span>
                       </div>
         
-                        <button class="login-btn" style="background:#87c524;" type="submit" onclick="getconnexion()">Inscription</button>
+                        <button class="login-btn" style="background:#87c524;" type="submit" >Inscription</button>
                         <div style="float: right;margin-top: 5px;"><a href="/web-index-login">déja avoir compte, retournez à Connexion</a></div>
                     </div>
                 </form>
@@ -78,7 +78,7 @@
                 }
             })
         
-            function getconnexion(){
+            $(".login-btn").click(function(){
                 const mysql = require('mysql');
 
                 // 创建数据库连接
@@ -103,7 +103,7 @@
 
                 // 关闭数据库连接
                 connection.end();
-            }
+            })
 
             function getcode(t){
                 $.post('web-index-reigsterCode',{},function(msg){
