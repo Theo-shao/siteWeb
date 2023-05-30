@@ -73,49 +73,39 @@
             </div>    
         </div>
         <div style="height:117px;"></div>
+        <input type="hidden" id="qtype" name="qtype" value="">
+        <input type="hidden" id="qhotel" name="qhotel" value="">
+        <input type="hidden" id="qservice" name="qservice" value="">
+        <input type="hidden" id="qdevice" name="qdevice" value="">
+        <input type="hidden" id="qprice" name="qprice" value="">
+        <!-- -搜索框- -->
+        <div class="list-dp">
+            <div class="w1080">
+                <ul class="clearfix">
+                    <li class="datalist-input1">
+                        <label for="Date_a">入住日期&nbsp;&nbsp;｜</label>
+                        <input id="Date_a" type="text" value="2023-05-30">
+                    </li>
+                    <li class="datalist-input2">
+                        <label for="Date_b">退房日期&nbsp;&nbsp;｜</label>
+                        <input id="Date_b" type="text" value="2023-05-31">
+                    </li>
+                    <li>
+                        <button type="submit" onclick="queryHotel(1)">搜索</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-
-
-    <input type="hidden" id="qtype" name="qtype" value="">
-    <input type="hidden" id="qhotel" name="qhotel" value="">
-    <input type="hidden" id="qservice" name="qservice" value="">
-    <input type="hidden" id="qdevice" name="qdevice" value="">
-    <input type="hidden" id="qprice" name="qprice" value="">
-    <!-- -搜索框- -->
-    <div class="list-dp">
         <div class="w1080">
-            <ul class="clearfix">
-                <li class="Destination">
-                    <label for="Destination">目的地&nbsp;&nbsp;｜</label>
-                    <input id="Destination" type="text" name="queryname" value="广州">
-                </li>
-                <li class="datalist-input1">
-                    <label for="Date_a">入住日期&nbsp;&nbsp;｜</label>
-                    <input id="Date_a" type="text" value="2023-05-30">
-                </li>
-                <li class="datalist-input2">
-                    <label for="Date_b">退房日期&nbsp;&nbsp;｜</label>
-                    <input id="Date_b" type="text" value="2023-05-31">
-                </li>
-                <li>
-                    <button type="submit" onclick="queryHotel(1)">搜索</button>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="w1080">
         <!--刷选条件-->
-        <div class="list-screen-box">
-        </div>
-
-
-
-        <h3 class="sure-title"><span id="search_cityname">广州</span>：今日共有 <font id="search_hotelnum">1</font> 家旅舍可供预订</h3>
-
-
-
-        <div class="can-book-box clearfix">
+            <div class="list-screen-box">
+            </div>
+            <h3 class="sure-title">
+                <span id="search_cityname">广州</span>：今日共有 
+                <font id="search_hotelnum">1</font> 家旅舍可供预订
+            </h3>
+            <div class="can-book-box clearfix">
 
             <!-- -左栏 旅店搜索列表- -->
 
