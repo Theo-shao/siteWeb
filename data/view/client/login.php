@@ -77,7 +77,6 @@
                         <input type="submit" name="submit" class="login-btn" value="Submit"> 
                     </form>    
                     <?php
-echo "<h2>您输入的内容是:</h2>";
 echo "<br>";
 echo $email;
 echo "<br>";
