@@ -78,7 +78,6 @@
                     </form>    
                     <?php
 echo "<h2>您输入的内容是:</h2>";
-echo $name;
 echo "<br>";
 echo $email;
 echo "<br>";
