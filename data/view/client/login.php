@@ -56,7 +56,7 @@
         
                         <dl class="login-and-registration-dl">
                             <dd>
-                                <label class="login-and-registration-icon1"></label><input type="text" placeholder="E-mail" name="username"><span class="error"><?php echo $emailErr;?></span>
+                                <label class="login-and-registration-icon1"></label><input type="text" placeholder="E-mail" name="email"><span class="error"><?php echo $emailErr;?></span>
                             </dd>       
                             <dd>
                                 <label class="login-and-registration-icon2"></label><input type="password" placeholder="mot de passe" name="password"><span class="error"><?php echo $passwordErr;?></span>
