@@ -19,6 +19,23 @@
     <?php
     $password = $email = "";
     $emailErr = $passwordErr = "";
+    $hostname = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "sci";
+
+    // 创建数据库连接
+    $conn = new mysqli($hostname, $username, $password, $database);
+
+    // 检查连接是否成功
+    if ($conn->connect_error) {
+        die("数据库连接失败: " . $conn->connect_error);
+    } else {
+        echo "成功连接到数据库";
+    }
+    // 关闭数据库连接
+    $conn->close();
+
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {   
         if (empty($_POST["email"]))
@@ -28,6 +45,19 @@
         else
         {
             $email = test_input($_POST["email"]);
+            // 检测邮箱是否合法
+            if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$email))
+            {
+                $emailErr = "Format de boîte aux lettres illégal"; 
+            }
+        }
+        if (empty($_POST["password"]))
+        {
+            $passwordErr = "Mot de passe est obligatoire";
+        }
+        else
+        {
+            $password = test_input($_POST["password"]);
             // 检测邮箱是否合法
             if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$email))
             {
