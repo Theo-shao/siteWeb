@@ -19,7 +19,35 @@
                     <a href="./"></a>
                 </h1>
                 <div class="login-and-registration-form">
-                    <form class="login-form" action="/web-index-loginDo" method="post" id="form">
+<?php
+$name = $password = $email = "";
+$emailErr = $passwordErr = "";
+if ($_SERVER["REQUEST_METHOD"] == "POST")
+{   
+    if (empty($_POST["name"]))
+    {
+      $emailErr = "E-mail est obligatoire";
+    }
+    else
+    {
+        $email = test_input($_POST["name"]);
+        // 检测邮箱是否合法
+        if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$email))
+        {
+            $emailErr = "Format de boîte aux lettres illégal"; 
+        }
+    }
+}
+
+function test_input($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+>
+                    <form class="login-form" action="" method="post" id="form">
                         <h2>
                             <span>Bienvenu à tous
                                 <font style="vertical-align:super;font-size:50%; ">®</font>
@@ -28,10 +56,12 @@
         
                         <dl class="login-and-registration-dl">
                             <dd>
-                                <label class="login-and-registration-icon1"></label><input type="text" placeholder="E-mail/Télephone" name="username">
+                                <label class="login-and-registration-icon1"></label><input type="text" placeholder="E-mail" name="username" value="<?php echo $name;?>">
+                                <span class="error">* <?php echo $emailErr;?></span>
                             </dd>       
                             <dd>
                                 <label class="login-and-registration-icon2"></label><input type="password" placeholder="mot de passe" name="password">        
+                                <span class="error">* <?php echo $passwordErr;?></span>
                             </dd>
                         </dl>
                         <div class="self-and-forget clearfix">
@@ -44,7 +74,8 @@
                             </span>
                             <!-- <span class="forget fr">oublier le mot de passe ? <a href="/web-index-getpassword1">点击重置&gt;&gt;</a></span> -->
                         </div>
-                        <a href="javascript:$('#form').submit()" class="login-btn">登录</a>
+                        <!-- <a href="javascript:$('#form').submit()" class="login-btn">登录</a> -->
+                        <input type="submit" name="submit" class="login-btn" value="Submit"> 
                     </form>             
                 </div>
             </div>
