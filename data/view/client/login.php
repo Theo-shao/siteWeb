@@ -11,6 +11,9 @@
 	    <link rel="shortcut icon" href="" />
         <title>SCI-EUROPE/Activité</title>
         <link rel="stylesheet" href="../../../css/app.css" />
+        <style>
+        .error {color: #FF0000;}
+        </style>
     </head>
     <body style="filter: gray;">
     <?php
