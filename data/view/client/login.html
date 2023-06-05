@@ -62,14 +62,7 @@ function test_input($data)
                                 <label class="login-and-registration-icon2"></label><input type="password" placeholder="mot de passe" name="password"><span class="error"><?php echo $passwordErr;?></span>
                             </dd>
                         </dl>
-                        <?php
-echo "<h2>您输入的内容是:</h2>";
-echo $name;
-echo "<br>";
-echo $email;
-echo "<br>";
-echo $emailErr;
-?>
+                        
                         <div class="self-and-forget clearfix">
                             <span class="checkbox_item fl">
                                 <input type="checkbox" name="remember" value="1">
@@ -82,7 +75,15 @@ echo $emailErr;
                         </div>
                         <!-- <a href="javascript:$('#form').submit()" class="login-btn">登录</a> -->
                         <input type="submit" name="submit" class="login-btn" value="Submit"> 
-                    </form>             
+                    </form>    
+                    <?php
+echo "<h2>您输入的内容是:</h2>";
+echo $name;
+echo "<br>";
+echo $email;
+echo "<br>";
+echo $emailErr;
+?>         
                 </div>
             </div>
         </div>
