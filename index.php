@@ -56,7 +56,7 @@
 				|                           
 				<a href="http://localhost/site/siteWeb/data/view/client/inscription.html" class="user-login"><img src="images/market/user-icon.png">Inscription</a>  
 				| 
-				<a href="http://localhost/site/siteWeb/data/view/client/login.html" class="user-login">Connexion</a>                                 
+				<a href="C:\wamp64\www\site\siteWeb\data\view\client\login.php" class="user-login">Connexion</a>                                 
 				<div class="lang">                    
 				| 
                 	<a href="index.html" class="fr"><img src="images/market/FR.jpg" alt="Francais">FR</a>
