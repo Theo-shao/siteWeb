@@ -100,7 +100,7 @@
                     echo "Connexion réussie";
                 }
                 else{
-                    echo "Connexion échec";
+                    echo "Mot de pass n'est pas correct";
                 }
                 // 释放结果集
                 $result->free_result();
