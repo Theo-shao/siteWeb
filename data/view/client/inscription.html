@@ -13,6 +13,25 @@
         <link rel="stylesheet" href="../../../css/app.css" />
     </head>
     <body style="filter: gray;">
+        <?php
+        $password = $email = '';
+        $emailErr = $passwordErr = '';
+
+        $hostname = "localhost";
+        $username = "root";
+        $password = "";
+        $database = "sci";
+
+        $conn = new mysqli($hostname, $username, $password, $database);
+
+        function test_input($data)
+        {
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+        }
+        ?>
         <div class="login-and-registration-con registration">
             <div class="login-and-registration">
                 <!-- <h1><a href="./"><img src="images/logo.png" height="76" width="157" alt=""></a></h1> -->
@@ -62,6 +81,9 @@
                         <div style="float: right;margin-top: 5px;"><a href="/web-index-login">déja avoir compte, retournez à Connexion</a></div>
                     </div>
                 </form>
+                <?php
+                    
+                ?>
             </div>
         </div>
         

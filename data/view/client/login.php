@@ -19,6 +19,7 @@
     <?php
     $password = $email = '';
     $emailErr = $passwordErr = '';
+
     $hostname = "localhost";
     $username = "root";
     $password = "";
@@ -26,24 +27,6 @@
 
     // 创建数据库连接
     $conn = new mysqli($hostname, $username, $password, $database);
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST")
-    {   
-        if (empty($_POST["email"]))
-        {
-            $emailErr = 'E-mail est obligatoire';
-        }
-        else
-        {
-            $email = test_input($_POST["email"]);
-            // 检测邮箱是否合法
-            if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$email))
-            {
-                $emailErr = 'Format de boîte aux lettres illégal'; 
-            }
-        }
-        
-    }
 
     function test_input($data)
     {
@@ -88,7 +71,18 @@
                         <!-- <a href="javascript:$('#form').submit()" class="login-btn">登录</a> -->
                         <input type="submit" name="submit" class="login-btn" value="Submit"> 
                     </form>    
-                    <?php
+        <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST"){   
+            if (empty($_POST["email"])){
+                $emailErr = 'E-mail est obligatoire';
+            }
+            else{
+                $email = test_input($_POST["email"]);
+                if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$email)){
+                    $emailErr = 'Format de boîte aux lettres illégal'; 
+                }
+            }   
+        }
 
         if (empty($_POST["password"]))
         {
@@ -111,7 +105,7 @@
         }
         // 关闭数据库连接
         $conn->close();
-?>       
+        ?>       
                 </div>
             </div>
         </div>
