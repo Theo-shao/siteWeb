@@ -99,6 +99,9 @@
                 if($numRows==1){
                     echo "Connexion réussie";
                 }
+                else{
+                    echo "Connexion échec";
+                }
                 // 释放结果集
                 $result->free_result();
             }
