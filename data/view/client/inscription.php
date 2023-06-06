@@ -117,7 +117,7 @@
                             if ($result === false) {
                                 echo $conn->error;
                             } else {
-                                echo "Inscription réussit"
+                                echo "Inscription réussit";
                             }
                         }
                 }
