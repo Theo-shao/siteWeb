@@ -17,8 +17,8 @@
     </head>
     <body style="filter: gray;">
     <?php
-    $password = $email = "";
-    $emailErr = $passwordErr = "";
+    $password = $email = '';
+    $emailErr = $passwordErr = '';
     $hostname = "localhost";
     $username = "root";
     $password = "";
@@ -39,7 +39,7 @@
     {   
         if (empty($_POST["email"]))
         {
-            $emailErr = "E-mail est obligatoire";
+            $emailErr = 'E-mail est obligatoire';
         }
         else
         {
@@ -47,7 +47,7 @@
             // 检测邮箱是否合法
             if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$email))
             {
-                $emailErr = "Format de boîte aux lettres illégal"; 
+                $emailErr = 'Format de boîte aux lettres illégal'; 
             }
         }
         
@@ -100,7 +100,7 @@
 
         if (empty($_POST["password"]))
         {
-            $passwordErr = "Mot de passe est obligatoire";
+            $passwordErr = 'Mot de passe est obligatoire';
         }
         else{
             $password = test_input($_POST["password"]);
