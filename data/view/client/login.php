@@ -65,9 +65,9 @@
             // 检查查询结果
             if ($result->num_rows > 0) {
             // 遍历结果集
-                echo 'connexion avec accès';
+                echo "connexion avec accès";
             } else {
-                echo 'avec échecs';
+                echo "avec échecs";
             }
         }
         // 关闭数据库连接
