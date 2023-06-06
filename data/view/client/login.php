@@ -68,8 +68,8 @@
                             </span>
                             <!-- <span class="forget fr">oublier le mot de passe ? <a href="/web-index-getpassword1">点击重置&gt;&gt;</a></span> -->
                         </div>
-                        <!-- <a href="javascript:$('#form').submit()" class="login-btn">登录</a> -->
-                        <input type="submit" name="submit" class="login-btn" value="Submit"> 
+                        <a href="javascript:$('#form').submit()" class="login-btn">登录</a>
+                        <!-- <input type="submit" name="submit" class="login-btn" value="Submit">  -->
                     </form>    
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST"){   
@@ -102,7 +102,6 @@
                 else{
                     echo "Mot de pass n'est pas correct";
                 }
-                // 释放结果集
                 $result->free_result();
             }
         }
