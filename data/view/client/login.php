@@ -33,8 +33,7 @@
     } else {
         echo "成功连接到数据库";
     }
-    // 关闭数据库连接
-    $conn->close();
+
 
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {   
@@ -51,19 +50,32 @@
                 $emailErr = "Format de boîte aux lettres illégal"; 
             }
         }
+
         if (empty($_POST["password"]))
         {
             $passwordErr = "Mot de passe est obligatoire";
         }
-        else
-        {
+        else{
             $password = test_input($_POST["password"]);
             // 检测邮箱是否合法
-            if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$email))
-            {
-                $emailErr = "Format de boîte aux lettres illégal"; 
+            $sql = "SELECT * FROM uertable WHERE email=$email;
+            // 执行查询
+            $result = $conn->query($sql);
+            
+            // 检查查询结果
+            if ($result->num_rows > 0) {
+            // 遍历结果集
+                while ($row = $result->fetch_assoc()) {
+                   if( $row["password"] == $password ) {
+                        echo "connexion avec accès";
+                   }
+                }
+            } else {
+                echo "avec échecs";
             }
         }
+        // 关闭数据库连接
+         $conn->close();
     }
 
     function test_input($data)
