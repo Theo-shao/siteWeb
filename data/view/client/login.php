@@ -106,15 +106,19 @@
             $password = test_input($_POST["password"]);
             $sql = "SELECT * FROM usertable WHERE email=$email and pass=$password";
             $result = $conn->query($sql);
-            // if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    // 输出每行数据
-                    echo "ID: " . $row["email"] . " creé! " ;
-                }
-            // }
-            // else{
-                // echo $passwordErr;
-            // }
+              // 检查查询是否成功
+            if ($result === false) {
+                echo "查询失败: " . $conn->error;
+            } else {
+    // 获取结果集的行数
+    $numRows = $result->num_rows;
+
+    // 输出行数
+    echo "结果集行数: " . $numRows;
+
+    // 释放结果集
+    $result->free_result();
+  }
         }
         // 关闭数据库连接
         $conn->close();
