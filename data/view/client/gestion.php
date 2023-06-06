@@ -136,6 +136,35 @@
                             </ul>
                         </div>
                     </form>
+                    
+                    <?php
+                    if ($_SERVER["REQUEST_METHOD"] == "POST"){
+                        $Meth = test_input($_POST["type"]);
+                        $email = test_input($_POST["value"]);
+                        $tel = test_input($_POST["value"]);
+                        $num = test_input($_POST["oid"]);
+                        if($Meth=="E-mail"){
+                            $sql = "SELECT * FROM command WHERE id='$num' and email='$email';";
+                            $result = $conn->query($sql);
+                            if ($result === false) {
+                                echo $conn->error;
+                            } else {
+                                $numRows = $result->num_rows;
+                                if($numRows==1){
+                                    echo "Connexion réussie";
+                                }
+                                else{
+                                    echo "Mot de pass n'est pas correct";
+                                }
+                                $result->free_result();
+                            }
+                        }
+                        else if($Meth=="Télephone"){
+
+                        }
+                    }
+                    ?>
+
                 </div>
             </div>
         </div>
