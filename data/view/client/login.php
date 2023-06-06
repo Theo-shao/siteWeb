@@ -107,17 +107,15 @@
             $sql = "SELECT * FROM usertable WHERE email='$email' and pass='$password';";
             $result = $conn->query($sql);
             if ($result === false) {
-                echo "查询失败: " . $conn->error.$email.$password;
+                echo $conn->error;
             } else {
-    // 获取结果集的行数
-    $numRows = $result->num_rows;
-
-    // 输出行数
-    echo "结果集行数: " . $numRows;
-
-    // 释放结果集
-    $result->free_result();
-  }
+                $numRows = $result->num_rows;
+                if($numRows==1){
+                    echo "Connexion réussie";
+                }
+                // 释放结果集
+                $result->free_result();
+            }
         }
         // 关闭数据库连接
         $conn->close();
