@@ -14,7 +14,7 @@
     </head>
     <body style="filter: gray;">
         <?php
-        $password = $email = '';
+        $password = $email = $tel = '';
         $emailErr = $passwordErr = '';
 
         $hostname = "localhost";
@@ -45,11 +45,11 @@
         
                         <dl class="login-and-registration-dl">
                             <dd>
-                                <label class="login-and-registration-icon4"></label><input type="text" placeholder="E-mail（obligatoire）" name="email" required="">
+                                <label class="login-and-registration-icon4"></label><input type="text" placeholder="E-mail（obligatoire）" name="email" required=""><span class="error"><?php echo $emailErr;?></span>
                             </dd>
                             <dd class="clearfix">
                             <div class="fr" style="width:398px;">
-                                <input type="password" placeholder="mot de passe（6~16 lettres/chiffres）" style="border-bottom:1px solid #ccc;" name="password" required="">
+                                <input type="password" placeholder="mot de passe（6~16 lettres/chiffres）" style="border-bottom:1px solid #ccc;" name="password" required=""><span class="error"><?php echo $passwordErr;?></span>
                                 <input type="password" placeholder="confirmer à nouveau" name="password2" required="">
                             </div>
                                 <label class="login-and-registration-icon2" style="vertical-align:-38px;"></label>
@@ -78,11 +78,23 @@
                       </div>
         
                         <button class="login-btn" style="background:#87c524;" type="submit" >Inscription</button>
-                        <div style="float: right;margin-top: 5px;"><a href="/web-index-login">déja avoir compte, retournez à Connexion</a></div>
+                        <div style="float: right;margin-top: 5px;"><a href="/data/view/client/login.php">déja avoir compte, retournez à Connexion</a></div>
                     </div>
                 </form>
                 <?php
-                    
+                if ($_SERVER["REQUEST_METHOD"] == "POST"){   
+                    if (empty($_POST["email"])){
+                        $emailErr = 'E-mail est obligatoire';
+                    }
+                    else{
+                        $email = test_input($_POST["email"]);
+                        if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$email)){
+                            $emailErr = 'Format de boîte aux lettres illégal'; 
+                        }
+                    }   
+                }
+
+                
                 ?>
             </div>
         </div>
