@@ -27,14 +27,6 @@
     // 创建数据库连接
     $conn = new mysqli($hostname, $username, $password, $database);
 
-    // 检查连接是否成功
-    if ($conn->connect_error) {
-        die("数据库连接失败: " . $conn->connect_error);
-    } else {
-        echo "成功连接到数据库";
-    }
-
-
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {   
         if (empty($_POST["email"]))
