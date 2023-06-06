@@ -112,7 +112,7 @@
                             $passwordErr = 'Les deux mots de passe ne sont pas identiques';
                         }
                         else{
-                            $sql = "INSERT INTO usertable (email, password, tele) VALUES ('$email', '$password', '$tel');";
+                            $sql = "INSERT INTO usertable (email, pass, tele) VALUES ('$email', '$password', '$tel');";
                             $result = $conn->query($sql);
                             if ($result === false) {
                                 echo $conn->error;
@@ -120,9 +120,8 @@
                                 echo "Inscription réussit";
                             }
                         }
+                    }
                 }
-
-                
                 ?>
             </div>
         </div>
@@ -146,7 +145,5 @@
                 })
             }
         </script>
-        
-        
         </body>
 </html>
