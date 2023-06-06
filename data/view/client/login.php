@@ -104,9 +104,8 @@
         }
         else{
             $password = test_input($_POST["password"]);
-            $sql = "SELECT * FROM usertable u WHERE u.email=$email and u.pass=$password";
+            $sql = "SELECT * FROM usertable WHERE email=$email and pass=$password;";
             $result = $conn->query($sql);
-              // 检查查询是否成功
             if ($result === false) {
                 echo "查询失败: " . $conn->error.$email.$password;
             } else {
