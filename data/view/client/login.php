@@ -108,7 +108,7 @@
             $result = $conn->query($sql);
               // 检查查询是否成功
             if ($result == false) {
-                echo "查询失败: " . $conn->error;
+                echo "查询失败: " . $conn->error.$email.$password;
             } else {
     // 获取结果集的行数
     $numRows = $result->num_rows;
