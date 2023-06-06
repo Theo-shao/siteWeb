@@ -51,10 +51,10 @@
         
                         <dl class="login-and-registration-dl">
                             <dd>
-                                <label class="login-and-registration-icon1"></label><input type="text" placeholder="E-mail" name="email"><span class="error"><?php echo $emailErr;?></span>
+                                <label class="login-and-registration-icon1"></label><input type="text" placeholder="E-mail" name="email">
                             </dd>       
                             <dd>
-                                <label class="login-and-registration-icon2"></label><input type="password" placeholder="mot de passe" name="password"><span class="error"><?php echo $passwordErr;?></span>
+                                <label class="login-and-registration-icon2"></label><input type="password" placeholder="mot de passe" name="password">
                             </dd>
                         </dl>
                         
@@ -68,7 +68,7 @@
                             </span>
                             <!-- <span class="forget fr">oublier le mot de passe ? <a href="/web-index-getpassword1">点击重置&gt;&gt;</a></span> -->
                         </div>
-                        <a href="javascript:$('#form').submit()" class="login-btn">登录</a>
+                        <a href="javascript:$('#form').submit()" class="login-btn">Connectez</a>
                         <!-- <input type="submit" name="submit" class="login-btn" value="Submit">  -->
                     </form>    
         <?php
@@ -81,29 +81,28 @@
                 if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$email)){
                     $emailErr = 'Format de boîte aux lettres illégal'; 
                 }
-            }   
-        }
-
-        if (empty($_POST["password"]))
-        {
-            $passwordErr = 'Mot de passe est obligatoire';
-        }
-        else{
-            $password = test_input($_POST["password"]);
-            $sql = "SELECT * FROM usertable WHERE email='$email' and pass='$password';";
-            $result = $conn->query($sql);
-            if ($result === false) {
-                echo $conn->error;
-            } else {
-                $numRows = $result->num_rows;
-                if($numRows==1){
-                    echo "Connexion réussie";
-                }
-                else{
-                    echo "Mot de pass n'est pas correct";
-                }
-                $result->free_result();
             }
+            if (empty($_POST["password"]))
+            {
+                $passwordErr = 'Mot de passe est obligatoire';
+            }
+            else{
+                $password = test_input($_POST["password"]);
+                $sql = "SELECT * FROM usertable WHERE email='$email' and pass='$password';";
+                $result = $conn->query($sql);
+                if ($result === false) {
+                    echo $conn->error;
+                } else {
+                    $numRows = $result->num_rows;
+                    if($numRows==1){
+                        echo "Connexion réussie";
+                    }
+                    else{
+                        echo "Mot de pass n'est pas correct";
+                    }
+                    $result->free_result();
+                }
+            }   
         }
         // 关闭数据库连接
         $conn->close();

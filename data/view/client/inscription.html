@@ -14,7 +14,7 @@
     </head>
     <body style="filter: gray;">
         <?php
-        $password = $email = $tel = '';
+        $password = $email = $tel = $password2='';
         $emailErr = $passwordErr = '';
 
         $hostname = "localhost";
@@ -55,7 +55,7 @@
                                 <label class="login-and-registration-icon2" style="vertical-align:-38px;"></label>
                             </dd>
                             <dd>
-                                <label class="login-and-registration-icon3"></label><input type="text" placeholder="Télephone（obligatoire）" name="tel" required="">
+                                <label class="login-and-registration-icon3"></label><input type="text" placeholder="Télephone" name="tel" required="">
                             </dd>
         
                             <!-- <dd class="verification">
@@ -91,7 +91,35 @@
                         if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$email)){
                             $emailErr = 'Format de boîte aux lettres illégal'; 
                         }
-                    }   
+                    }  
+                    
+                    if (empty($_POST["password"]))
+                    {
+                        $passwordErr = 'Mot de passe est obligatoire';
+                    }
+                    else{
+                        $password = test_input($_POST["password"]);
+                    }  
+
+                    if (empty($_POST["password2"]))
+                    {
+                        $passwordErr = 'Mot de passe est obligatoire';
+                    }
+                    else{
+                        $password2 = test_input($_POST["password2"]);
+                        $tel = test_input($_POST["tel"]);
+                        if($password != $password2){
+                            $passwordErr = 'Les deux mots de passe ne sont pas identiques';
+                        }
+                        else{
+                            $sql = "INSERT INTO usertable (email, password, tele) VALUES ('$email', '$password', '$tel');";
+                            $result = $conn->query($sql);
+                            if ($result === false) {
+                                echo $conn->error;
+                            } else {
+                                echo "Inscription réussit"
+                            }
+                        }
                 }
 
                 
