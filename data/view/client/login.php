@@ -42,7 +42,7 @@
                     <a href="./"></a>
                 </h1>
                 <div class="login-and-registration-form">
-                    <form class="login-form" action="http://localhost/site/siteWeb/data/view/client/inscription.php" method="post" id="form">
+                    <form class="login-form" action="" method="post" id="form">
                         <h2>
                             <span>Bienvenu à tous
                                 <font style="vertical-align:super;font-size:50%; ">®</font>
