@@ -58,20 +58,16 @@
         else{
             $password = test_input($_POST["password"]);
             // 检测邮箱是否合法
-            $sql = "SELECT * FROM uertable WHERE email=$email;
+            $sql = "SELECT * FROM uertable WHERE email=$email and pass=$password;
             // 执行查询
             $result = $conn->query($sql);
             
             // 检查查询结果
             if ($result->num_rows > 0) {
             // 遍历结果集
-                while ($row = $result->fetch_assoc()) {
-                   if( $row["password"] == $password ) {
-                        echo "connexion avec accès";
-                   }
-                }
+                echo 'connexion avec accès';
             } else {
-                echo "avec échecs";
+                echo 'avec échecs';
             }
         }
         // 关闭数据库连接
