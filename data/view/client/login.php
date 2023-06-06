@@ -50,8 +50,7 @@
                 $emailErr = "Format de boîte aux lettres illégal"; 
             }
         }
-        // 关闭数据库连接
-         $conn->close();
+        
     }
 
     function test_input($data)
@@ -104,6 +103,7 @@
             $passwordErr = "Mot de passe est obligatoire";
         }
         else{
+            $password = test_input($_POST["password"]);
             $sql = "SELECT * FROM usertable WHERE email=$email and pass=$password";
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
@@ -116,8 +116,9 @@
                 echo $passwordErr;
             }
         }
-        
-?>         
+        // 关闭数据库连接
+        $conn->close();
+?>       
                 </div>
             </div>
         </div>
