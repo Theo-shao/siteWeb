@@ -78,7 +78,7 @@
                       </div>
         
                         <button class="login-btn" style="background:#87c524;" type="submit" >Inscription</button>
-                        <div style="float: right;margin-top: 5px;"><a href="/data/view/client/login.php">déja avoir compte, retournez à Connexion</a></div>
+                        <div style="float: right;margin-top: 5px;"><a href="http://localhost/site/siteWeb/data/view/client/inscription.php">déja avoir compte, retournez à Connexion</a></div>
                     </div>
                 </form>
                 <?php
