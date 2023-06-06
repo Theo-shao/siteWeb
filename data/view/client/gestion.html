@@ -48,6 +48,26 @@
         </script>
     </head>
     <body style="filter: gray;">
+        <?php
+        $Meth = $email = $tel = $num='';
+
+        $hostname = "localhost";
+        $username = "root";
+        $password = "";
+        $database = "sci";
+
+        $conn = new mysqli($hostname, $username, $password, $database);
+
+        function test_input($data)
+        {
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+        }
+        ?>
+
+
         <div class="header headers">        
             <div class="header-container">            
                 <a class="logo" href="/">SCI-EUROPE</a>            
@@ -77,7 +97,7 @@
             <div class="w1080">
                 <div class="step"></div>
                 <div class="public-personal">
-                    <form action="/web-member-orderQueryDo" method="post">
+                    <form action="" method="post">
                         <div class="vip-list-con vip-list-cons2 vip-list-con-gl-2">
                             <div class="personal-p-title">
                                 <h2>Veuillez remplir les informations suivantes pour vous renseigner sur les informations de votre commande</h2>
@@ -94,11 +114,11 @@
                                     <label><i>*</i>E-mail/télephone：</label>
                                     <input class="membership-input w370" type="text" name="value">
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <label><i>*</i>Code de vérification：</label>
                                     <input class="membership-input w370" type="text" name="verify" autocomplete="off">
                                     <img src="../../../images/verifie/web-index-1.png" title="点击刷新" style=" margin:0px 0 -10px -120px; cursor:pointer;">
-                                </li>
+                                </li> -->
                                 <!-- <li id="varifyCode">
                                     <label><i>*</i>请填写你收到的校验码：</label>
                                     <input class="membership-input w370" type="text" name="code" autocomplete="off">
