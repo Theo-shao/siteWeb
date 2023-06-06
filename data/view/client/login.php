@@ -98,10 +98,7 @@
                         <input type="submit" name="submit" class="login-btn" value="Submit"> 
                     </form>    
                     <?php
-echo "<br>";
-echo $email;
-echo "<br>";
-echo $emailErr;
+
         if (empty($_POST["password"]))
         {
             $passwordErr = "Mot de passe est obligatoire";
@@ -114,6 +111,9 @@ echo $emailErr;
                     // 输出每行数据
                     echo "ID: " . $row["email"] . " creé! " ;
                 }
+            }
+            else{
+                echo $passwordErr;
             }
         }
         
