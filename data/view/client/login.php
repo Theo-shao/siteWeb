@@ -106,15 +106,15 @@
             $password = test_input($_POST["password"]);
             $sql = "SELECT * FROM usertable WHERE email=$email and pass=$password";
             $result = $conn->query($sql);
-            if ($result->num_rows > 0) {
+            // if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     // 输出每行数据
                     echo "ID: " . $row["email"] . " creé! " ;
                 }
-            }
-            else{
-                echo $passwordErr;
-            }
+            // }
+            // else{
+                // echo $passwordErr;
+            // }
         }
         // 关闭数据库连接
         $conn->close();
