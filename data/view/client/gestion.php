@@ -143,7 +143,6 @@
                         $email = test_input($_POST["value"]);
                         $tel = test_input($_POST["value"]);
                         $num = test_input($_POST["oid"]);
-                        echo "$Meth";
                         if($Meth==1){
                             $sql = "SELECT * FROM commend WHERE id='$num' and email='$email';";
                             $result = $conn->query($sql);
@@ -158,8 +157,7 @@
                                 $result->free_result();
                             }
                         }
-                        else {
-                            echo "$tel";
+                        else if($Meth==2){
                             $sql = "SELECT * FROM commend WHERE id='$num' and tele='$tel';";
                             $result = $conn->query($sql);
                             if ($result === false) {
@@ -167,7 +165,7 @@
                             } else {
                                 if ($result->num_rows > 0) {
                                     while ($row = $result->fetch_assoc()) {
-                                      echo "Numéro de commande: " . $row["id"] . ",  E-mail:" . $row["email"] . ",  Date de départ:" .$row["datedepart"] . ",  Date de fin:" .$row["datefin"] . "<br>";
+                                      echo "Numéro de commande: " . $row["id"] . ",  E-mail:" . $row["email"]  . ",  Tel:" . $row["tele"] . ",  Date de départ:" .$row["datedepart"] . ",  Date de fin:" .$row["datefin"] . "<br>";
                                     }
                                 }    
                                 $result->free_result();
