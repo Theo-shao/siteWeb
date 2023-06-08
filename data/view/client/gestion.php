@@ -147,6 +147,7 @@
                             $sql = "SELECT * FROM command WHERE id='$num' and email='$email';";
                             $result = $conn->query($sql);
                             if ($result === false) {
+                                echo "$email";
                                 echo $conn->error;
                             } else {
                             //     if ($result->num_rows > 0) {
