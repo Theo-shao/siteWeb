@@ -157,7 +157,7 @@
                                 $result->free_result();
                             }
                         }
-                        else if($Meth==0){
+                        else {
                             echo "$tel";
                             $sql = "SELECT * FROM commend WHERE id='$num' and tele='$tel';";
                             $result = $conn->query($sql);
