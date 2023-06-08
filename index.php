@@ -138,11 +138,11 @@
                         <dd class="Date_a"><label><input type="text" id="Date_a" name="stime" placeholder="Date d'arrivée" required="required"><b></b></label></dd>
                         <dd class="Date_b"><label><input type="text" id="Date_b" name="etime" placeholder="Date de départ" required="required"><b></b></label></dd>
                         <dd class="date_btn">
-                            <a href="javascript:$('#form').submit()">Rechercher</a>
+                            <a href="javascript:$('#form').submit()" class="date_btn">Rechercher</a>
                             <!-- <button type="submit">Rechercher</button> -->
                         </dd>
                     </form>
-                    ::after
+                   
                 </dl>
             </div>
             <?php
