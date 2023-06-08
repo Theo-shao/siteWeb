@@ -6,3 +6,13 @@ CREATE TABLE commend (
     datefin DATE,
     FOREIGN KEY (customer_id) REFERENCES customers(id)
 )
+
+CREATE TABLE chambres (
+	num varchar(20) PRIMARY KEY,
+    maximem int NOT NULL,
+    toilette boolean NOT NULL,
+    climatiseur boolean NOT NULL,
+    disponible boolean NOT NULL
+)
+INSERT INTO `chambres` (`num`, `maximem`, `toilette`, `climatiseur`,'disponible') VALUES 
+('A1', '6', '1', '1','1'),('A2', '2', '1', '1','1'),('A3', '1', '1', '1','1'),('A4', '2', '0', '0','1'),('A5', '6', '1', '1','1'),('B1', '3', '0', '0','1'),('B2', '1', '1', '0','1'),('B3', '2', '1', '0','1'),('B4', '4', '1', '1','1');

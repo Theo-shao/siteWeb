@@ -48,6 +48,25 @@
 	</script>
 </head>
 <body style="filter: gray;">
+<?php
+    $etime = $stime ='';
+
+    $hostname = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "sci";
+
+    // 创建数据库连接
+    $conn = new mysqli($hostname, $username, $password, $database);
+
+    function test_input($data)
+    {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+    }
+?>
     <div class="header headers">        
 		<div class="header-container">            
 			<a class="logo" href="/"><img src="#" alt="SCI-EUROPE"></a>            
@@ -116,20 +135,49 @@
             <div class="Date_place">
                 <dl class="clearfix">
                     <form id="frmQuery" name="frmQuery" method="post" action="/web-info-reserver">
-                        <!-- <dd class="place">
-                            <input type="text" id="place" name="queryname" placeholder="您想去哪里" required="required">
-                        </dd> -->
                         <dd class="Date_a"><label><input type="text" id="Date_a" name="stime" placeholder="Date d'arrivée" required="required"><b></b></label></dd>
                         <dd class="Date_b"><label><input type="text" id="Date_b" name="etime" placeholder="Date de départ" required="required"><b></b></label></dd>
                         <dd class="date_btn"><button type="submit">Rechercher</button></dd>
-                        <!-- <dd class="mapImg">
-                            <a href="javascript:void(0);" class="mapImg1"></a>
-                            <a href="javascript:void(0);" class="mapImg2"></a>
-                        </dd> -->
                     </form>
                     ::after
                 </dl>
             </div>
+            <?php
+                if ($_SERVER["REQUEST_METHOD"] == "POST"){
+                    $stime = test_input($_POST["stime"]);
+                    $etime = test_input($_POST["etime"]);
+                    echo "$stime";
+                    if($Meth==1){
+                        $sql = "SELECT * FROM commend WHERE id='$num' and email='$email';";
+                        $result = $conn->query($sql);
+                        if ($result === false) {
+                            echo $conn->error;
+                        } else {
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                  echo "Numéro de commande: " . $row["id"] . ",  E-mail" . $row["email"] . ",  Date de départ:" .$row["datedepart"] . ",  Date de fin:" .$row["datefin"] . "<br>";
+                                }
+                            }    
+                            $result->free_result();
+                        }
+                    }
+                    else if($Meth==2){
+                        $sql = "SELECT * FROM commend WHERE id='$num' and tele='$tel';";
+                        $result = $conn->query($sql);
+                        if ($result === false) {
+                            echo $conn->error;
+                        } else {
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                  echo "Numéro de commande: " . $row["id"] . ",  E-mail:" . $row["email"]  . ",  Tel:" . $row["tele"] . ",  Date de départ:" .$row["datedepart"] . ",  Date de fin:" .$row["datefin"] . "<br>";
+                                }
+                            }    
+                            $result->free_result();
+                        }
+                    }
+                }
+                $conn->close();
+            ?>
         </div>
         <div class="homeSlideBg">
         </div>
@@ -138,11 +186,6 @@
     <div class="yha_a">
         <!-- barre -->
         <div class="banner_map">
-
-            <!-- <a href="/web-info-about" target="_blank">
-                <img src="#">
-            </a> -->
-
         </div>
 
         <div class="w1080 clearfix">
