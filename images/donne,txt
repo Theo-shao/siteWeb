@@ -4,8 +4,12 @@ CREATE TABLE commend (
     tele VARCHAR(30),
     datedepart DATE,
     datefin DATE,
-    FOREIGN KEY (customer_id) REFERENCES customers(id)
+    num_chambre VARCHAR(30),
+    FOREIGN KEY (email) REFERENCES usertable(email),
+    FOREIGN KEY (num_chambre) REFERENCES chambres(num)
 )
+
+INSERT INTO `commend`(`id`, `email`, `tele`, `datedepart`, `datefin`, `num_chambre`) VALUES ('','132@qq.com','123456789','2023-06-08','2023-07-01','A2')
 
 CREATE TABLE chambres (
 	num varchar(20) PRIMARY KEY,

@@ -150,7 +150,20 @@
                 if ($_SERVER["REQUEST_METHOD"] == "POST"){
                     $stime = test_input($_POST["stime"]);
                     $etime = test_input($_POST["etime"]);
-                    echo "$stime";
+                    $sql = "SELECT * FROM chambres ch,commend c WHERE email='$email' and pass='$password';";
+                    $result = $conn->query($sql);
+                    if ($result === false) {
+                        echo $conn->error;
+                    } else {
+                        $numRows = $result->num_rows;
+                        if($numRows==1){
+                            echo "Connexion réussie";
+                        }
+                        else{
+                            echo "Mot de pass n'est pas correct";
+                        }
+                        $result->free_result();
+                    }
                     
                     
                 }
