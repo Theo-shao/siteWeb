@@ -145,7 +145,8 @@
                    
                 </dl>
             </div>
-            <?php
+        </div>
+        <?php
                 if ($_SERVER["REQUEST_METHOD"] == "POST"){
                     $stime = test_input($_POST["stime"]);
                     $etime = test_input($_POST["etime"]);
@@ -155,7 +156,6 @@
                 }
                 $conn->close();
             ?>
-        </div>
         <div class="homeSlideBg">
         </div>
     </div>
