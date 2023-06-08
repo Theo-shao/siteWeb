@@ -143,7 +143,7 @@
                         $email = test_input($_POST["value"]);
                         $tel = test_input($_POST["value"]);
                         $num = test_input($_POST["oid"]);
-                        echo "111111$Meth";
+                        echo "3333333_____$Meth------";
                         if($Meth=="E-mail"){
                             $sql = "SELECT * FROM command WHERE id='$num' and email='$email';";
                             $result = $conn->query($sql);
