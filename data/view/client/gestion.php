@@ -70,7 +70,7 @@
 
         <div class="header headers">        
             <div class="header-container">            
-                <a class="logo" href="/">SCI-EUROPE</a>            
+                <a class="logo" href="http://localhost/site/siteWeb">SCI-EUROPE</a>            
                 <div class="top-user-panel">          
                     <a href="http://localhost/site/siteWeb/data/view/client/gestion.php" class="user-login">Gestion de commande</a>       
                     |                           
