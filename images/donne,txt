@@ -1,0 +1,8 @@
+CREATE TABLE commend (
+    id INT PRIMARY KEY,
+    email VARCHAR(30),
+    tele VARCHAR(30),
+    datedepart DATE,
+    datefin DATE,
+    FOREIGN KEY (customer_id) REFERENCES customers(id)
+)
