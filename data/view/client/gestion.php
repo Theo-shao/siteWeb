@@ -149,11 +149,21 @@
                             if ($result === false) {
                                 echo $conn->error;
                             } else {
-                                if ($result->num_rows > 0) {
-                                    while ($row = $result->fetch_assoc()) {
-                                      echo "ID: " . $row["id"] . ", Name: " . $row["email"] . "<br>";
-                                    }
-                                  }
+                            //     if ($result->num_rows > 0) {
+                            //         while ($row = $result->fetch_assoc()) {
+                            //           echo "ID: " . $row["id"] . ", Name: " . $row["email"] . "<br>";
+                            //         }
+                            //       }
+                            // }
+                            
+                                $numRows = $result->num_rows;
+                                if($numRows==1){
+                                    echo "Connexion réussie";
+                                }
+                                else{
+                                    echo "Mot de pass n'est pas correct";
+                                }
+                                $result->free_result();
                             }
                         }
                         else if($Meth=="Télephone"){
