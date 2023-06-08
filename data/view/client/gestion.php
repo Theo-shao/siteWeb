@@ -144,7 +144,7 @@
                         $tel = test_input($_POST["value"]);
                         $num = test_input($_POST["oid"]);
                         if($Meth==1){
-                            $sql = "SELECT * FROM command WHERE id='$num' and email='$email';";
+                            $sql = "SELECT * FROM commend WHERE id='$num' and email='$email';";
                             $result = $conn->query($sql);
                             if ($result === false) {
                                 echo "$email";
