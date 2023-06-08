@@ -143,6 +143,7 @@
                         $email = test_input($_POST["value"]);
                         $tel = test_input($_POST["value"]);
                         $num = test_input($_POST["oid"]);
+                        echo "$Meth";
                         if($Meth==1){
                             $sql = "SELECT * FROM commend WHERE id='$num' and email='$email';";
                             $result = $conn->query($sql);
