@@ -137,7 +137,10 @@
                     <form id="frmQuery" name="frmQuery" method="post" action="/web-info-reserver">
                         <dd class="Date_a"><label><input type="text" id="Date_a" name="stime" placeholder="Date d'arrivée" required="required"><b></b></label></dd>
                         <dd class="Date_b"><label><input type="text" id="Date_b" name="etime" placeholder="Date de départ" required="required"><b></b></label></dd>
-                        <dd class="date_btn"><button type="submit">Rechercher</button></dd>
+                        <dd class="date_btn">
+                            <a href="javascript:$('#form').submit()">Rechercher</a>
+                            <!-- <button type="submit">Rechercher</button> -->
+                        </dd>
                     </form>
                     ::after
                 </dl>
@@ -147,34 +150,8 @@
                     $stime = test_input($_POST["stime"]);
                     $etime = test_input($_POST["etime"]);
                     echo "$stime";
-                    if($Meth==1){
-                        $sql = "SELECT * FROM commend WHERE id='$num' and email='$email';";
-                        $result = $conn->query($sql);
-                        if ($result === false) {
-                            echo $conn->error;
-                        } else {
-                            if ($result->num_rows > 0) {
-                                while ($row = $result->fetch_assoc()) {
-                                  echo "Numéro de commande: " . $row["id"] . ",  E-mail" . $row["email"] . ",  Date de départ:" .$row["datedepart"] . ",  Date de fin:" .$row["datefin"] . "<br>";
-                                }
-                            }    
-                            $result->free_result();
-                        }
-                    }
-                    else if($Meth==2){
-                        $sql = "SELECT * FROM commend WHERE id='$num' and tele='$tel';";
-                        $result = $conn->query($sql);
-                        if ($result === false) {
-                            echo $conn->error;
-                        } else {
-                            if ($result->num_rows > 0) {
-                                while ($row = $result->fetch_assoc()) {
-                                  echo "Numéro de commande: " . $row["id"] . ",  E-mail:" . $row["email"]  . ",  Tel:" . $row["tele"] . ",  Date de départ:" .$row["datedepart"] . ",  Date de fin:" .$row["datefin"] . "<br>";
-                                }
-                            }    
-                            $result->free_result();
-                        }
-                    }
+                    
+                    
                 }
                 $conn->close();
             ?>
