@@ -158,6 +158,7 @@
                             }
                         }
                         else if($Meth==0){
+                            echo "$tel";
                             $sql = "SELECT * FROM commend WHERE id='$num' and tele='$tel';";
                             $result = $conn->query($sql);
                             if ($result === false) {
@@ -165,7 +166,7 @@
                             } else {
                                 if ($result->num_rows > 0) {
                                     while ($row = $result->fetch_assoc()) {
-                                      echo "Numéro de commande: " . $row["id"] . ",  E-mail" . $row["email"] . ",  Date de départ:" .$row["datedepart"] . ",  Date de fin:" .$row["datefin"] . "<br>";
+                                      echo "Numéro de commande: " . $row["id"] . ",  E-mail:" . $row["email"] . ",  Date de départ:" .$row["datedepart"] . ",  Date de fin:" .$row["datefin"] . "<br>";
                                     }
                                 }    
                                 $result->free_result();
