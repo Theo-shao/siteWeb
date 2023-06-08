@@ -72,11 +72,11 @@
             <div class="header-container">            
                 <a class="logo" href="/">SCI-EUROPE</a>            
                 <div class="top-user-panel">          
-                    <a href="http://localhost/site/siteWeb/data/view/client/gestion.html" class="user-login">Gestion de commande</a>       
+                    <a href="http://localhost/site/siteWeb/data/view/client/gestion.php" class="user-login">Gestion de commande</a>       
                     |                           
-                    <a href="http://localhost/site/siteWeb/data/view/client/inscription.html" class="user-login"><img src="../../../images/market/user-icon.png">Inscription</a>  
+                    <a href="http://localhost/site/siteWeb/data/view/client/inscription.php" class="user-login"><img src="../../../images/market/user-icon.png">Inscription</a>  
                     | 
-                    <a href="http://localhost/site/siteWeb/data/view/client/login.html" class="user-login">Connexion</a>                                 
+                    <a href="http://localhost/site/siteWeb/data/view/client/login.php" class="user-login">Connexion</a>                                 
                     <div class="lang">                    
                     | 
                         <a href="index.html" class="fr"><img src="../../../images/market/FR.jpg" alt="Francais">FR</a>
