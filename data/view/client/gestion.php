@@ -158,7 +158,7 @@
                             }
                         }
                         else if($Meth==0){
-                            $sql = "SELECT * FROM commend WHERE id='$num' and tel='$tel';";
+                            $sql = "SELECT * FROM commend WHERE id='$num' and tele='$tel';";
                             $result = $conn->query($sql);
                             if ($result === false) {
                                 echo $conn->error;
