@@ -134,7 +134,7 @@
 
             <div class="Date_place">
                 <dl class="clearfix">
-                    <form id="frmQuery" name="frmQuery" method="post" action="/web-info-reserver">
+                    <form id="frmQuery" name="frmQuery" method="post" action="">
                         <dd class="Date_a"><label><input type="text" id="Date_a" name="stime" placeholder="Date d'arrivée" required="required"><b></b></label></dd>
                         <dd class="Date_b"><label><input type="text" id="Date_b" name="etime" placeholder="Date de départ" required="required"><b></b></label></dd>
                         <dd class="date_btn">
