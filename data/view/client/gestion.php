@@ -151,12 +151,9 @@
                             } else {
                                 if ($result->num_rows > 0) {
                                     while ($row = $result->fetch_assoc()) {
-                                      echo "ID: " . $row["id"] . ", Name: " . $row["email"] . "<br>";
+                                      echo "Numéro de commande: " . $row["id"] . ",  E-mail" . $row["email"] . ",  Date de départ:" .$row["datedepart"] . ",  Date de fin:" .$row["datefin"] . "<br>";
                                     }
-                                }
-                            
-                            
-                                
+                                }    
                                 $result->free_result();
                             }
                         }
