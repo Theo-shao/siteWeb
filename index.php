@@ -152,15 +152,21 @@
                     $etime = test_input($_POST["etime"]);
                     $sql = "SELECT * FROM chambres WHERE disponible = '1';";
                     $result = $conn->query($sql);
+                    $variable = "<tr><th>Chambre:</th><th>Maximum:</th><th>Toilette:</th><th>Climatiseur:</th></tr>";
                     if ($result === false) {
                         echo $conn->error;
                     } else {
                         while ($row = $result->fetch_assoc()) {
                             // 处理和输出每一行的数据
-                            echo "Chambre: " . $row['num'] . ", ";
-                            echo "Maximem: " . $row['maximem'] . ", ";
-                            echo "Toilette: " . $row['toilette'] . ", ";
-                            echo "Climatiseur: " . $row['climatiseur'] . "<br>";
+                            echo "<tr>";
+                            echo "<td>".$row['num']."</td>";
+                            echo "<td>" . $row['maximem'] . "</td>";
+                            echo "<td>" . $row['toilette'] . "</td>";
+                            echo "<td>" . $row['climatiseur'] . "</td>";
+                            // echo "Chambre: " . $row['num'] . ", ";
+                            // echo "Maximem: " . $row['maximem'] . ", ";
+                            // echo "Toilette: " . $row['toilette'] . ", ";
+                            // echo "Climatiseur: " . $row['climatiseur'] . "<br>";
                         }
                         $result->free_result();
                     }
