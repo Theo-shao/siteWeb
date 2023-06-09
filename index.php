@@ -150,7 +150,7 @@
                 if ($_SERVER["REQUEST_METHOD"] == "POST"){
                     $stime = test_input($_POST["stime"]);
                     $etime = test_input($_POST["etime"]);
-                    $sql = "SELECT * FROM chambres WHERE disponbile = '1';";
+                    $sql = "SELECT * FROM chambres WHERE disponible = '1';";
                     $result = $conn->query($sql);
                     if ($result === false) {
                         echo $conn->error;
