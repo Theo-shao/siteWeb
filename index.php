@@ -166,7 +166,7 @@
                     }
                 }
                 $conn->close();
-            ?>
+        ?>
         <div class="homeSlideBg">
         </div>
     </div>
