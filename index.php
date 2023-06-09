@@ -157,7 +157,7 @@
                     } else {
                         while ($row = $result->fetch_assoc()) {
                             // 处理和输出每一行的数据
-                            echo "Chambre: " . $row['num'] . ",           ";
+                            echo "Chambre: " . $row['num'] . ", ";
                             echo "Maximem: " . $row['maximem'] . ", ";
                             echo "Toilette: " . $row['toilette'] . ", ";
                             echo "Climatiseur: " . $row['climatiseur'] . "<br>";
