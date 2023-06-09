@@ -150,22 +150,20 @@
                 if ($_SERVER["REQUEST_METHOD"] == "POST"){
                     $stime = test_input($_POST["stime"]);
                     $etime = test_input($_POST["etime"]);
-                    $sql = "SELECT * FROM chambres ch,commend c WHERE email='$email' and pass='$password';";
+                    $sql = "SELECT * FROM chambres WHERE disponbile = '1';";
                     $result = $conn->query($sql);
                     if ($result === false) {
                         echo $conn->error;
                     } else {
-                        $numRows = $result->num_rows;
-                        if($numRows==1){
-                            echo "Connexion réussie";
-                        }
-                        else{
-                            echo "Mot de pass n'est pas correct";
+                        while ($row = $result->fetch_assoc()) {
+                            // 处理和输出每一行的数据
+                            echo "Chambre: " . $row['num'] . ", ";
+                            echo "Maximem: " . $row['maximem'] . ", ";
+                            echo "Toilette: " . $row['toilette'] . ", ";
+                            echo "Climatiseur: " . $row['climatiseur'] . "<br>";
                         }
                         $result->free_result();
                     }
-                    
-                    
                 }
                 $conn->close();
             ?>
