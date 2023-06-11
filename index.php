@@ -184,15 +184,9 @@
                     <p>
                         L'emplacement est excellent, l'équipement est complet, et tout <br>
                         est propre et bien rangé, ce qui rend votre séjour agréable et<br>
-                        confortable en toute tranquillité.<a href="/web-info-about">Apprendre encore plus</a>
+                        confortable en toute tranquillité.<a href="http://localhost/site/siteWeb/data/view/info/about.html">Apprendre encore plus</a>
                     </p>
-                    <a class="yha_a_btn" href="/web-info-act">Activité</a>
-
-                    <a class="yha_a_btn" href="/web-info-env">Environnement</a>
-
-                    <div class="card-discount">
-
-                    </div>
+                    <a class="yha_a_btn" href="http://localhost/site/siteWeb/data/view/info/act.html">Activité</a>
 
                 </div>
 
