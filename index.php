@@ -85,7 +85,7 @@
 			</div>            
 			<ul class="top-nav">                 
                 <li><a href="http://localhost/site/siteWeb/data/view/info/about.html">Présentation</a></li>                               
-                <li><a href="http://localhost/site/siteWeb/data/view/info/reserver.html">Réservation</a></li>                                              
+                <li><a href="http://localhost/site/siteWeb/data/view/info/reserver.php">Réservation</a></li>                                              
                 <li><a href="http://localhost/site/siteWeb/data/view/info/act.html">Voyage/Activité</a></li>             
                 <li><a href="http://localhost/site/siteWeb/data/view/info/contact.html">Contact</a></li>                
             </ul>     
@@ -282,10 +282,10 @@
      <div class="footer_h">
 
         <ul class="clearfix w1080">
-            <li><a href="/web-info-about">Présentation</a></li>                               
-            <li><a href="/web-info-reserver">Réservation</a></li>                                              
-            <li><a href="/web-info-act">Voyage/Activité</a></li>             
-            <li><a href="/web-info-contact">Contact</a></li>
+        <li><a href="http://localhost/site/siteWeb/data/view/info/about.html">Présentation</a></li>                               
+                <li><a href="http://localhost/site/siteWeb/data/view/info/reserver.php">Réservation</a></li>                                              
+                <li><a href="http://localhost/site/siteWeb/data/view/info/act.html">Voyage/Activité</a></li>             
+                <li><a href="http://localhost/site/siteWeb/data/view/info/contact.html">Contact</a></li> 
         </ul> 
 
      </div>

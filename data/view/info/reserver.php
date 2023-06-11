@@ -48,15 +48,36 @@
         </script>
     </head>
     <body style="filter: gray;">
+
+    <?php
+    $etime = $stime ='';
+
+    $hostname = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "sci";
+
+    // 创建数据库连接
+    $conn = new mysqli($hostname, $username, $password, $database);
+
+    function test_input($data)
+    {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+    }
+?>
+
         <div class="header headers">        
             <div class="header-container">            
                 <a class="logo" href="/">SCI-EUROPE</a>            
                 <div class="top-user-panel">          
-                    <a href="http://localhost/site/siteWeb/data/view/client/gestion.html" class="user-login">Gestion de commande</a>       
+                    <a href="http://localhost/site/siteWeb/data/view/client/gestion.php" class="user-login">Gestion de commande</a>       
                     |                           
-                    <a href="http://localhost/site/siteWeb/data/view/client/inscription.html" class="user-login"><img src="../../../images/market/user-icon.png">Inscription</a>  
+                    <a href="http://localhost/site/siteWeb/data/view/client/inscription.php" class="user-login"><img src="../../../images/market/user-icon.png">Inscription</a>  
                     | 
-                    <a href="http://localhost/site/siteWeb/data/view/client/login.html" class="user-login">Connexion</a>                                 
+                    <a href="http://localhost/site/siteWeb/data/view/client/login.php" class="user-login">Connexion</a>                                 
                     <div class="lang">                    
                     | 
                         <a href="index.html" class="fr"><img src="../../../images/market/FR.jpg" alt="Francais">FR</a>
@@ -66,7 +87,7 @@
                 </div>            
                 <ul class="top-nav">                 
                     <li><a href="http://localhost/site/siteWeb/data/view/info/about.html">Présentation</a></li>                               
-                    <li><a href="http://localhost/site/siteWeb/data/view/info/reserver.html">Réservation</a></li>                                              
+                    <li><a href="http://localhost/site/siteWeb/data/view/info/reserver.php">Réservation</a></li>                                              
                     <li><a href="http://localhost/site/siteWeb/data/view/info/act.html">Voyage/Activité</a></li>             
                     <li><a href="http://localhost/site/siteWeb/data/view/info/contact.html">Contact</a></li>                
                 </ul>     
@@ -84,11 +105,11 @@
                 <ul class="clearfix">
                     <li class="datalist-input1">
                         <label for="Date_a">Date d'arrivée&nbsp;&nbsp;</label>|
-                        <input id="Date_a" type="text" value="2023-05-30">
+                        <input id="Date_a" type="text" value="">
                     </li>
                     <li class="datalist-input2">
                         <label for="Date_b">Date de départ&nbsp;&nbsp;</label>|
-                        <input id="Date_b" type="text" value="2023-05-31">
+                        <input id="Date_b" type="text" value="">
                     </li>
                     <li>
                         <button type="submit" onclick="queryHotel(1)">Rechercher</button>
@@ -166,11 +187,11 @@
                     <div id="pagelist"></div>
                     </div>
                 <!-- -浏览记录- -->
-                    <div class="browsing">
+                    <!-- <div class="browsing">
                         <h2>Historique</h2>
                         <dl class="clearfix">
                         </dl>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -202,10 +223,10 @@
         <div class="footer_h">
    
            <ul class="clearfix w1080">
-               <li><a href="/web-info-about">Présentation</a></li>                               
-               <li><a href="/web-info-reserver">Réservation</a></li>                                              
-               <li><a href="/web-info-act">Voyage/Activité</a></li>             
-               <li><a href="/web-info-contact">Contact</a></li>
+                <li><a href="http://localhost/site/siteWeb/data/view/info/about.html">Présentation</a></li>                               
+                <li><a href="http://localhost/site/siteWeb/data/view/info/reserver.php">Réservation</a></li>                                              
+                <li><a href="http://localhost/site/siteWeb/data/view/info/act.html">Voyage/Activité</a></li>             
+                <li><a href="http://localhost/site/siteWeb/data/view/info/contact.html">Contact</a></li> 
            </ul> 
    
         </div>
