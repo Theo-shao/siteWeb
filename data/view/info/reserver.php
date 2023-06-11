@@ -142,9 +142,7 @@
                     <ul class="c-b-l-list">
                       <li class="clearfix" data-map="23.125121, 113.308268" onclick="show_marker(104983);" id="list-hostel-104983">
                         <div class="left fl">
-                            <a href="/web-hostel-detail-id-104983" target="_blank">
-                                <img src="http://111.230.248.218:1500/fileUpload/104983/15422715974171542271597417_0.jpg" width="220" height="150">
-                            </a>
+                            
                         </div>
                         <div class="right fr">
                             <div class="dianping">
