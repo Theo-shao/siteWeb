@@ -150,13 +150,14 @@
                 if ($_SERVER["REQUEST_METHOD"] == "POST"){
                     $stime = test_input($_POST["stime"]);
                     $etime = test_input($_POST["etime"]);
-                    $sql = "SELECT * FROM commend c,chambres ch WHERE ch.num=c.num_chambre ;";
+                    $sql = "SELECT * FROM commend c,chambres ch WHERE ch.num=c.num_chambre  ;";
                     $result = $conn->query($sql);
                     if ($result === false) {
                         echo $conn->error;
                     } else {
                         while ($row = $result->fetch_assoc()) {
                             // 处理和输出每一行的数据
+                            echo " $stime".$row['datefin'] ;
                             echo "Chambre: " . $row['num'] . ", ";
                             echo "Maximem: " . $row['maximem'] . ", ";
                             echo "Toilette: " . $row['toilette'] . ", ";
