@@ -268,7 +268,7 @@
                 <br/>Vie simple et de qualité, entraide et aide aux autres.
 
             </p>
-            <a href="/web-info-about">appendre plus</a>
+            <a href="http://localhost/site/siteWeb/data/view/info/about.html">appendre plus</a>
         </div>
        
     </div>
