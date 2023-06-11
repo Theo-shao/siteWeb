@@ -150,7 +150,7 @@
                 if ($_SERVER["REQUEST_METHOD"] == "POST"){
                     $stime = test_input($_POST["stime"]);
                     $etime = test_input($_POST["etime"]);
-                    $sql = "SELECT * FROM commend c WHERE $stime>=c.datefin;";
+                    $sql = "SELECT * FROM commend c,chambres ch WHERE ch.num_chambre=c.num and $stime>=c.datefin;";
                     $result = $conn->query($sql);
                     if ($result === false) {
                         echo $conn->error;
