@@ -115,7 +115,7 @@
             </div>
         </div>
         <?php
-                
+                $etime = $stime ='';
                 if ($_SERVER["REQUEST_METHOD"] == "POST"){
                     $stime = test_input($_POST["stime"]);
                     $etime = test_input($_POST["etime"]);
@@ -172,8 +172,7 @@
             </dl>
         </div>
         <?php
-                $stime = test_input($_POST["stime"]);
-                $etime = test_input($_POST["etime"]);
+                
                 $emailErr=$email=$num=$tel="";
                 if ($_SERVER["REQUEST_METHOD"] == "POST"){   
                     if (empty($_POST["email"])){
