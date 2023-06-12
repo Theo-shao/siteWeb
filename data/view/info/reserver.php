@@ -112,7 +112,13 @@
                 </ul>
             </div>
         </div>
-
+        <?php
+                if ($_SERVER["REQUEST_METHOD"] == "POST"){
+                    $stime = test_input($_POST["stime"]);
+                    $etime = test_input($_POST["etime"]);
+                    $sql = "SELECT * from chambres where num NOT IN (SELECT ch.num FROM commend c,chambres ch WHERE ch.num=c.num_chambre and '$stime'<c.datefin ) ;";
+                    $result = $conn->query($sql);
+        ?>
         <div class="w1080">
         <!--刷选条件-->
             <div class="list-screen-box">
@@ -124,11 +130,6 @@
             <div class="can-book-box clearfix">
             <!-- -左栏 旅店搜索列表- -->
             <?php
-                if ($_SERVER["REQUEST_METHOD"] == "POST"){
-                    $stime = test_input($_POST["stime"]);
-                    $etime = test_input($_POST["etime"]);
-                    $sql = "SELECT * from chambres where num NOT IN (SELECT ch.num FROM commend c,chambres ch WHERE ch.num=c.num_chambre and '$stime'<c.datefin ) ;";
-                    $result = $conn->query($sql);
                     if ($result === false) {
                         echo $conn->error;
                     } else {
