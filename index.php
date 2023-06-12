@@ -161,86 +161,39 @@
                 </div>
 
                 <div class="yha_a_l_2">
-
                     <h3>FAQ</h3>
-
                     <p>
-
                         <a href="/">Difference entre l'auberge de jeunesse<font style="vertical-align:super;font-size:50%; ">&reg;</font>et l'hôtel </a>
-
                         <a href="/">Questions et réponses</a>
-                        
                         <a href="/" class="more">Apprendre encore plus</a>
-
                     </p>
-
                 </div>
-
             </div>
 
             <div class="yha_a_r fr">
-
                 <h3>Emplacement de l’adresse<font style="vertical-align:super;font-size:50%; ">&reg;</font></h3>
-
                 <p>
-
                     <br/>Affichez-vous notre adresse
-
                 </p>
-
                 <br/>
-
-                <!-- <div id="main" style="height:400px">
-
-                </div> -->
                 <div id="map" style="height:400px">
-
                 </div>
-
             </div>
-
-           <!-- Gabby——20180320修改 hihostels预订链接 -->  
-            <!-- <div class="book-aboard">
-            </div> -->
-
-            <!-- <div class="overseas-login" style="position:fixed; left:50%; top:50%;width:320px;height:280px;padding:10px 0;margin:-140px 0 0 -160px;overflow:hidden;background:#F1F1F1;box-shadow: 0 0 0 50vmax rgba(0,0,0,.8); z-index:999999;display:none;">
-
-                <span class="close-overseas-login fr" style="margin:0 20px 0 0;color:#666;cursor:pointer;">点击关闭</span>
-
-                <p class="iframe-load" style="text-align:center;position:absolute;left:45%;top:45%;color:#000;">
-
-                    loading...
-
-                </p>
-
-            </div>  -->
-
         </div>
-
     </div>
 
     <div class="about_us">
-
         <div class="about_text w1080">
-
             <h2>À propos de nous——SCI-EUROPE<font style="vertical-align:super;font-size:50%; ">&reg;</font>auberge de jeunesse<font style="vertical-align:super;font-size:50%; ">&reg;</font></h2>
-
             <p class="p1">
-
                 Nous préconisons <i></i>
-
             </p>
-
             <p class="p2">
-
                 Échange culturel, responsabilité sociale, pratique de la protection de l'environnement, soin de la nature
-
                 <br/>Vie simple et de qualité, entraide et aide aux autres.
-
             </p>
             <a href="http://localhost/site/siteWeb/data/view/info/about.html">appendre plus</a>
         </div>
-       
     </div>
 
 
@@ -248,55 +201,31 @@
     <!-- BEGIN FOOTER -->
 
     <div class="footer">
-
-     <div class="footer_h">
-
+      <div class="footer_h">
         <ul class="clearfix w1080">
-        <li><a href="http://localhost/site/siteWeb/data/view/info/about.html">Présentation</a></li>                               
-                <li><a href="http://localhost/site/siteWeb/data/view/info/reserver.php">Réservation</a></li>                                              
-                <li><a href="http://localhost/site/siteWeb/data/view/info/act.html">Voyage/Activité</a></li>             
-                <li><a href="http://localhost/site/siteWeb/data/view/info/contact.html">Contact</a></li> 
+            <li><a href="http://localhost/site/siteWeb/data/view/info/about.html">Présentation</a></li>                               
+            <li><a href="http://localhost/site/siteWeb/data/view/info/reserver.php">Réservation</a></li>                                              
+            <li><a href="http://localhost/site/siteWeb/data/view/info/act.html">Voyage/Activité</a></li>             
+            <li><a href="http://localhost/site/siteWeb/data/view/info/contact.html">Contact</a></li> 
         </ul> 
-
-     </div>
-
+      </div>
 
 
-     <div class="w1080">
 
+      <div class="w1080">
          <div class="footer_b clearfix">
-
-            
-
              <div class="footer_b_r fr">
-
                  <p>E-Mail：Parisnober@gmail.com</p>
-
                  <p>167 rue de la Roquette，75011</p>
-
                  <div class="share">
-
                      <br>
                      <br>
-
                  </div>
-
                   <p class="copyright">Tous droits réservé &copy; à SCI-EUROPE<font style="vertical-align:super;font-size:50%; ">&reg;</font>&nbsp;&nbsp;</p>
-
-
-
-
              </div>
-
          </div>
-
      </div>
-
     </div>
-
-
-
- 
 
 <!-- END FOOTER -->
 
