@@ -128,7 +128,6 @@
                 if ($_SERVER["REQUEST_METHOD"] == "POST"){
                     $stime = test_input($_POST["stime"]);
                     $etime = test_input($_POST["etime"]);
-                    echo '$stime';
                     $sql = "SELECT * from chambres where num NOT IN (SELECT ch.num FROM commend c,chambres ch WHERE ch.num=c.num_chambre and '$stime'<c.datefin ) ;";
                     $result = $conn->query($sql);
                     if ($result === false) {
