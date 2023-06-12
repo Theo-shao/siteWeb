@@ -128,40 +128,7 @@
             </h3>
             <div class="can-book-box clearfix">
             <!-- -左栏 旅店搜索列表- -->
-                <div class="can-book-l fl">
-                    <!-- -旅舍列表- -->
-                    <ul class="c-b-l-list">
-                      <li class="clearfix" data-map="23.125121, 113.308268" onclick="show_marker(104983);" id="list-hostel-104983">
-                        <div class="left fl">   
-                        </div>
-                        <div class="right fr">
-                            <b></b>
-				            <div class="advantage"></div>
-                            <div class="advantage"></div>
-                           
-                        </div>
-                        <div class="divab">
-                <!-- 来晚了！这家旅舍的住宿在我们网站已售完 -->
-                        </div>
-                      </li>
-                    </ul>
-                    <div class="page-box clearfix" style="display: block;">
-                <!-- <p class="fl">
-                    未找到理想的旅舍？返回
-                    <a href="javascript:void(0);" class="scrTop">
-                        <img src="images/ssym.jpg">搜索页面
-                    </a>
-                </p> -->
-                    <!-- -分页- -->
-                    <div id="pagelist"></div>
-                    </div>
-                <!-- -浏览记录- -->
-                    <!-- <div class="browsing">
-                        <h2>Historique</h2>
-                        <dl class="clearfix">
-                        </dl>
-                    </div> -->
-                </div>
+                
             </div>
         </div>
 
@@ -170,13 +137,6 @@
     <!-- -右下角小图标- -->
         <div class="Side_r">
             <ul>
-        <!-- <li class="Side_weixin"><a href="#"></a>
-            <div class="Side_weixin_b">
-                <img src="images/Side_erweima.jpg" height="90" width="90" alt="">
-            </div>
-        </li>
-        <li class="Side_weibo"><a href="http://service.weibo.com/share/share.php?url=www.yhachina.com/web-hostel-index" target="_blank"></a></li>
-        <li class="Side_xiaoxi"><a href="/web-info-suggest"></a></li> -->
                 <li class="Side_top"><a href="javascript:void(0);"></a></li>
             </ul>
         </div>
@@ -213,19 +173,11 @@
                     <p>E-Mail：Parisnober@gmail.com</p>
    
                     <p>167 rue de la Roquette，75011</p>
-   
                     <div class="share">
-   
                         <br>
                         <br>
-   
                     </div>
-   
                      <p class="copyright">Tous droits réservé &copy; à SCI-EUROPE<font style="vertical-align:super;font-size:50%; ">&reg;</font>&nbsp;&nbsp;</p>
-   
-   
-   
-   
                 </div>
    
             </div>
