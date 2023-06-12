@@ -50,9 +50,7 @@
     <body style="filter: gray;">
 
     <?php
-    global $etime ;
-    global $stime;
-    $emailErr = $email = $num = $tel ='';
+    $etime=$stime=$emailErr = $email = $num = $tel ='';
 
     $hostname = "localhost";
     $username = "root";
@@ -172,39 +170,7 @@
             </form>
             </dl>
         </div>
-        <!-- <?php
-                $stime = test_input($_POST["stime"]);
-                $etime = test_input($_POST["etime"]);
-                
-                if ($_SERVER["REQUEST_METHOD"] == "POST"){   
-                    if (empty($_POST["email"])){
-                        $emailErr = 'E-mail est obligatoire';
-                    }
-                    else{
-                        $tel = test_input($_POST["tel"]);
-                        $email = test_input($_POST["email"]);
-                        $num = test_input($_POST["num"]);
-                        if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$email)){
-                            $emailErr = 'Format de boîte aux lettres illégal'; 
-                        }
-                        else{
-                            echo '$stime';
-                            $sql = "INSERT INTO commend ( id,  email, tele, datedepart, datefin, num_chambre) VALUES ('1','$email','$tel','$stime','$etime','$num');";
-                            $result = $conn->query($sql);
-                            if ($result === false) {
-                                echo $conn->error;
-                            } else {
-                                echo "Connexion réussie";
-                            }
-                            
-                        }
-                        }
-                    }
-                    
-                
-                // 关闭数据库连接
-                $conn->close();
-        ?> -->
+       
         <div style="height:55px;"></div>
     <!-- -右下角小图标- -->
         <div class="Side_r">
