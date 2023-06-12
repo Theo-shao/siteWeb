@@ -97,6 +97,7 @@
         <!-- -搜索框- -->
         <div class="list-dp">
             <div class="w1080">
+            <form id="frmQuery" name="frmQuery" method="post" action="">
                 <ul class="clearfix">
                     <li class="datalist-input1">
                         <label for="Date_a">Date d'arrivée&nbsp;&nbsp;</label>|
@@ -110,6 +111,7 @@
                         <button type="submit">Rechercher</button>
                     </li>
                 </ul>
+            </form>
             </div>
         </div>
         <?php
