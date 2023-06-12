@@ -170,7 +170,8 @@
             </dl>
         </div>
         <?php
-                
+                $stime = test_input($_POST["stime"]);
+                $etime = test_input($_POST["etime"]);
                 
                 if ($_SERVER["REQUEST_METHOD"] == "POST"){   
                     if (empty($_POST["email"])){
