@@ -154,10 +154,10 @@
         <div class="w1080">
             <dl class="login-and-registration-dl">
                             <dd>
-                                <label class="login-and-registration-icon4">E-mail：</label><input type="text" placeholder="E-mail（obligatoire）" name="email" required="">
+                                <label >E-mail：</label><input type="text" placeholder="E-mail（obligatoire）" name="email" required="">
                             </dd>
                             <dd>
-                                <label class="login-and-registration-icon3">Num_chambre：</label><input type="text" placeholder="" name="num" required="">
+                                <label >Num_chambre：</label><input type="text" placeholder="" name="num" required="">
                             </dd>
         
                             <!-- <dd class="verification">
