@@ -105,11 +105,11 @@
                 <ul class="clearfix">
                     <li class="datalist-input1">
                         <label for="Date_a">Date d'arrivée&nbsp;&nbsp;</label>|
-                        <input id="Date_a" type="text" value="">
+                        <input id="Date_a" type="text" value="" name="stime">
                     </li>
                     <li class="datalist-input2">
                         <label for="Date_b">Date de départ&nbsp;&nbsp;</label>|
-                        <input id="Date_b" type="text" value="">
+                        <input id="Date_b" type="text" value="" name="etime">
                     </li>
                     <li>
                         <button type="submit">Rechercher</button>
@@ -128,7 +128,28 @@
             </h3>
             <div class="can-book-box clearfix">
             <!-- -左栏 旅店搜索列表- -->
-                
+            <?php
+                if ($_SERVER["REQUEST_METHOD"] == "POST"){
+                    $stime = test_input($_POST["stime"]);
+                    $etime = test_input($_POST["etime"]);
+                    $sql = "SELECT * from chambres where num NOT IN (SELECT ch.num FROM commend c,chambres ch WHERE ch.num=c.num_chambre and '$stime'<c.datefin ) ;";
+                    $result = $conn->query($sql);
+                    if ($result === false) {
+                        echo $conn->error;
+                    } else {
+                        while ($row = $result->fetch_assoc()) {
+                            // 处理和输出每一行的数据
+                            
+                            echo "Chambre: " . $row['num'] . ", ";
+                            echo "Maximem: " . $row['maximem'] . ", ";
+                            echo "Toilette: " . $row['toilette'] . ", ";
+                            echo "Climatiseur: " . $row['climatiseur'] . "<br>";
+                        }
+                        $result->free_result();
+                    }
+                }
+                $conn->close();
+        ?>
             </div>
         </div>
 
