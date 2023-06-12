@@ -112,7 +112,7 @@
                         <input id="Date_b" type="text" value="">
                     </li>
                     <li>
-                        <button type="submit" onclick="queryHotel(1)">Rechercher</button>
+                        <button type="submit">Rechercher</button>
                     </li>
                 </ul>
             </div>
