@@ -152,7 +152,7 @@
         </div>
         <div style="height:55px;"></div>
         <div class="w1080">
-            <dl class="login-and-registration-dl">
+            <dl>
                             <dd>
                                 <label >E-mail：</label>
                                 <input type="text" placeholder="E-mail（obligatoire）" name="email" required="">
