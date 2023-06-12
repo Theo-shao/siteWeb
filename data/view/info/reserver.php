@@ -145,8 +145,7 @@
                         }
                         $result->free_result();
                     }
-                }
-                $conn->close();
+        
             ?>
             </div>
         </div>
@@ -155,17 +154,51 @@
             <dl>
                 <dd >
                     <label>E-mail：</label>
-                    <input type="text" placeholder="E-mail（obligatoire）" name="email" required="">
+                    <input type="text" placeholder="xxx@xxx.xxx" name="email" required="">
+                </dd>
+                <dd >
+                    <label>tel：</label>
+                    <input type="text" placeholder="" name="tel" required="">
                 </dd>
                 <dd >
                     <label >Num_chambre：</label>
-                    <input type="text" placeholder="" name="num" required="">
+                    <input type="text" placeholder="A1" name="num" required="">
                 </dd>
                 <dd>
                     <button type='submit'>Créer</button>
                 </dd>
             </dl>
         </div>
+        <?php
+                $emailErr=$email=$num=$tel="";
+                if ($_SERVER["REQUEST_METHOD"] == "POST"){   
+                    if (empty($_POST["email"])){
+                        $emailErr = 'E-mail est obligatoire';
+                    }
+                    else{
+                        $tel = test_input($_POST["tel"]);
+                        $email = test_input($_POST["email"]);
+                        $num = test_input($_POST["num"]);
+                        if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$email)){
+                            $emailErr = 'Format de boîte aux lettres illégal'; 
+                        }
+                        else{
+                            $sql = "INSERT INTO `commend`(`id`, `email`, `tele`, `datedepart`, `datefin`, `num_chambre`) VALUES ('','$email','$tel','$stime','$etime','$num');";
+                            $result = $conn->query($sql);
+                            if ($result === false) {
+                                echo $conn->error;
+                            } else {
+                                echo "Connexion réussie";
+                            }
+                            $result->free_result();
+                        }
+                        }
+                    }
+                    
+                }
+                // 关闭数据库连接
+                $conn->close();
+        ?>
         <div style="height:55px;"></div>
     <!-- -右下角小图标- -->
         <div class="Side_r">
