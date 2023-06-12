@@ -50,7 +50,7 @@
     <body style="filter: gray;">
 
     <?php
-    $etime=$stime=$emailErr = $email = $num = $tel ='';
+    $etime=$stime ='';
 
     $hostname = "localhost";
     $username = "root";
