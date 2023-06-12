@@ -129,45 +129,16 @@
             <div class="can-book-box clearfix">
             <!-- -左栏 旅店搜索列表- -->
                 <div class="can-book-l fl">
-                <!-- -排序方式- -->
-                    <div class="title">
-                        <span>Trier par：</span>
-                        <a href="javascript:void(0);" class="down-up" onclick="downup(this,'roomMinPrice')">
-                            <span>prix</span>
-                            <b></b>
-                        </a>
-                    <!-- <a href="javascript:void(0);" onclick="downup(this,'LsLat')"><span>距离市中心</span><b></b></a> -->
-                    </div>
                     <!-- -旅舍列表- -->
                     <ul class="c-b-l-list">
                       <li class="clearfix" data-map="23.125121, 113.308268" onclick="show_marker(104983);" id="list-hostel-104983">
-                        <div class="left fl">
-                            
+                        <div class="left fl">   
                         </div>
                         <div class="right fr">
-                            <div class="dianping">
-                                <p class="fr">
-                                <!-- <a href="/web-hostel-detail-id-104983?tag=hostel-nav-i7" class="comment">
-                                    <b></b>点评
-                                </a>
-                                <a href="javascript:void(0);" onclick="addfavorite(this,104983);" class="collection">
-                                    <b></b>收藏
-                                </a> -->
-                                </p>
-                                <h2>
-                                    <a href="#" target="_blank"></a>
-                                </h2>
-                            </div>
                             <b></b>
 				            <div class="advantage"></div>
                             <div class="advantage"></div>
-                            <div class="price clearfix">
-                                <div class="price-l fl">
-                                </div>
-                                <div class="price-r fr">
-                                    <a class="sold-out" href="#">en rupture</a>              
-                                </div>
-                            </div>
+                           
                         </div>
                         <div class="divab">
                 <!-- 来晚了！这家旅舍的住宿在我们网站已售完 -->
