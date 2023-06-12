@@ -152,6 +152,7 @@
         <div style="height:55px;"></div>
         <div class="w1080">
             <dl>
+            <form id="frmQuery" name="frmQuery" method="post" action="">
                 <dd >
                     <label>E-mail：</label>
                     <input type="text" placeholder="xxx@xxx.xxx" name="email" required="">
@@ -167,6 +168,7 @@
                 <dd>
                     <button type='submit'>Créer</button>
                 </dd>
+            </form>
             </dl>
         </div>
         <?php
