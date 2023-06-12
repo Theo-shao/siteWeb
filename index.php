@@ -82,37 +82,28 @@
 						<a target="_blank" href="#" >
 							<img src="/images/smallimg.png" alt="">
 						</a>             
-
-
                     </li>
 					<li style="background-image:url(data/images/5b39db3b8c308.jpg);">
            				<a target="_blank" href="#" >
 							<img src="/images/smallimg.png" alt="">
 						</a>                 
-
-
                     </li>
 					<li style="background-image:url(data/images/5b39db4a5af97.jpg);">
 				        <a target="_blank" href="#" >
 							<img src="/images/smallimg.png" alt="">
 						</a>                 
-
-
                     </li>
                 </ul>
-
             </div>
 			<!-- Point pour changer des peintures -->
             <div class="hd-box">
                 <div class="hd_con">
                     <div class="hd">
                         <ul>
-							
                         </ul>
                     </div>
                 </div>
             </div>
-
             <div class="Date_place">
                 <dl class="clearfix">
                     <form id="frmQuery" name="frmQuery" method="post" action="">
@@ -136,8 +127,7 @@
                         echo $conn->error;
                     } else {
                         while ($row = $result->fetch_assoc()) {
-                            // 处理和输出每一行的数据
-                            
+                            // 处理和输出每一行的数据  
                             echo "Chambre: " . $row['num'] . ", ";
                             echo "Maximem: " . $row['maximem'] . ", ";
                             echo "Toilette: " . $row['toilette'] . ", ";
@@ -176,11 +166,11 @@
 
                     <p>
 
-                        <a href="/web-topic-view-dif">Difference entre l'auberge de jeunesse<font style="vertical-align:super;font-size:50%; ">&reg;</font>et l'hôtel </a>
+                        <a href="/">Difference entre l'auberge de jeunesse<font style="vertical-align:super;font-size:50%; ">&reg;</font>et l'hôtel </a>
 
-                        <a href="/web-topic-view-que">Questions et réponses</a>
+                        <a href="/">Questions et réponses</a>
                         
-                        <a href="/web-topic-view-plus" class="more">Apprendre encore plus</a>
+                        <a href="/" class="more">Apprendre encore plus</a>
 
                     </p>
 
