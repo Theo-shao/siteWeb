@@ -170,7 +170,7 @@
             </form>
             </dl>
         </div>
-        <?php
+        <!-- <?php
                 $stime = test_input($_POST["stime"]);
                 $etime = test_input($_POST["etime"]);
                 
@@ -202,7 +202,7 @@
                 
                 // 关闭数据库连接
                 $conn->close();
-        ?>
+        ?> -->
         <div style="height:55px;"></div>
     <!-- -右下角小图标- -->
         <div class="Side_r">
