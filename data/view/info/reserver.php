@@ -50,7 +50,7 @@
     <body style="filter: gray;">
 
     <?php
-    $etime = $stime ='';
+    $etime = $stime = $emailErr = $email = $num = $tel ='';
 
     $hostname = "localhost";
     $username = "root";
@@ -114,14 +114,7 @@
             </form>
             </div>
         </div>
-        <?php
-                $etime = $stime ='';
-                if ($_SERVER["REQUEST_METHOD"] == "POST"){
-                    $stime = test_input($_POST["stime"]);
-                    $etime = test_input($_POST["etime"]);
-                    $sql = "SELECT * from chambres where num NOT IN (SELECT ch.num FROM commend c,chambres ch WHERE ch.num=c.num_chambre and '$stime'<c.datefin ) ;";
-                    $result = $conn->query($sql);
-        ?>
+        
         <div class="w1080">
         <!--刷选条件-->
             <div class="list-screen-box">
@@ -132,6 +125,11 @@
             <div class="can-book-box clearfix">
             <!-- -左栏 旅店搜索列表- -->
             <?php
+                if ($_SERVER["REQUEST_METHOD"] == "POST"){
+                    $stime = test_input($_POST["stime"]);
+                    $etime = test_input($_POST["etime"]);
+                    $sql = "SELECT * from chambres where num NOT IN (SELECT ch.num FROM commend c,chambres ch WHERE ch.num=c.num_chambre and '$stime'<c.datefin ) ;";
+                    $result = $conn->query($sql);
                     if ($result === false) {
                         echo $conn->error;
                     } else {
@@ -145,7 +143,7 @@
                         }
                         $result->free_result();
                     }
-        
+                }
             ?>
             </div>
         </div>
@@ -173,34 +171,34 @@
         </div>
         <?php
                 
-                // $emailErr=$email=$num=$tel="";
-                // if ($_SERVER["REQUEST_METHOD"] == "POST"){   
-                //     if (empty($_POST["email"])){
-                //         $emailErr = 'E-mail est obligatoire';
-                //     }
-                //     else{
-                //         $tel = test_input($_POST["tel"]);
-                //         $email = test_input($_POST["email"]);
-                //         $num = test_input($_POST["num"]);
-                //         if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$email)){
-                //             $emailErr = 'Format de boîte aux lettres illégal'; 
-                //         }
-                //         else{
-                //             $sql = "INSERT INTO `commend`(`id`, `email`, `tele`, `datedepart`, `datefin`, `num_chambre`) VALUES ('2','$email','$tel','$stime','$etime','$num');";
-                //             $result = $conn->query($sql);
-                //             if ($result === false) {
-                //                 echo $conn->error;
-                //             } else {
-                //                 echo "Connexion réussie";
-                //             }
-                //             $result->free_result();
-                //         }
-                //         }
-                //     }
+                
+                if ($_SERVER["REQUEST_METHOD"] == "POST"){   
+                    if (empty($_POST["email"])){
+                        $emailErr = 'E-mail est obligatoire';
+                    }
+                    else{
+                        $tel = test_input($_POST["tel"]);
+                        $email = test_input($_POST["email"]);
+                        $num = test_input($_POST["num"]);
+                        if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$email)){
+                            $emailErr = 'Format de boîte aux lettres illégal'; 
+                        }
+                        else{
+                            $sql = "INSERT INTO commend ( id,  email, tele, datedepart, datefin, num_chambre) VALUES ('3','$email','$tel','$stime','$etime','$num');";
+                            $result = $conn->query($sql);
+                            if ($result === false) {
+                                echo $conn->error;
+                            } else {
+                                echo "Connexion réussie";
+                            }
+                            $result->free_result();
+                        }
+                        }
+                    }
                     
-                // }
-                // // 关闭数据库连接
-                // $conn->close();
+                
+                // 关闭数据库连接
+                $conn->close();
         ?>
         <div style="height:55px;"></div>
     <!-- -右下角小图标- -->
