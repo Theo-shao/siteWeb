@@ -25,49 +25,27 @@
         <![endif]-->
         <link rel="stylesheet" href="../../../css/app.css" />
      
-    
-    
-	<script>
-	var mobileAgent = new Array("iphone", "ipod", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
-
-	var browser = navigator.userAgent.toLowerCase(); 
-	var isMobile = false; 
-	for (var i=0; i<mobileAgent.length; i++)
-	{
-
-		if( browser.indexOf("ipad") != -1 && browser.indexOf("mobile") != -1 )
-		{
-			break;
-		}
-		else if( browser.indexOf(mobileAgent[i]) != -1 )
-		{
-			isMobile = true;
-			location.href = '' ;
-			break; 
-		}
-	}
-	</script>
 </head>
 <body style="filter: gray;">
     <div class="header headers">        
         <div class="header-container">            
             <a class="logo" href="/">SCI-EUROPE</a>            
             <div class="top-user-panel">          
-                <a href="http://localhost/site/siteWeb/data/view/client/gestion.html" class="user-login">Gestion de commande</a>       
+                <a href="http://localhost/site/siteWeb/data/view/client/gestion.php" class="user-login">Gestion de commande</a>       
                 |                           
-                <a href="http://localhost/site/siteWeb/data/view/client/inscription.html" class="user-login"><img src="../../../images/market/user-icon.png">Inscription</a>  
+                <a href="http://localhost/site/siteWeb/data/view/client/inscription.php" class="user-login"><img src="../../../images/market/user-icon.png">Inscription</a>  
                 | 
-                <a href="http://localhost/site/siteWeb/data/view/client/login.html" class="user-login">Connexion</a>                                 
+                <a href="http://localhost/site/siteWeb/data/view/client/login.php" class="user-login">Connexion</a>                                 
                 <div class="lang">                    
                 | 
                     <a href="index.html" class="fr"><img src="../../../images/market/FR.jpg" alt="Francais">FR</a>
                 |
-                    <a href="/en-web-index-index" class="cn"><img src="../../../images/market/CN.gif" alt="中文">CN</a>  
+                    <a href="/" class="cn"><img src="../../../images/market/CN.gif" alt="中文">CN</a>  
                 </div>             
             </div>            
             <ul class="top-nav">                 
                 <li><a href="http://localhost/site/siteWeb/data/view/info/about.html">Présentation</a></li>                               
-                <li><a href="http://localhost/site/siteWeb/data/view/info/reserver.html">Réservation</a></li>                                              
+                <li><a href="http://localhost/site/siteWeb/data/view/info/reserver.php">Réservation</a></li>                                              
                 <li><a href="http://localhost/site/siteWeb/data/view/info/act.html">Voyage/Activité</a></li>             
                 <li><a href="http://localhost/site/siteWeb/data/view/info/contact.html">Contact</a></li>                
             </ul>     
@@ -127,7 +105,7 @@
                 <div class="exhibition-r fr"> 
                     <br><br><br>
                     <div class="exhibition-r-block1">  <!--<a href="https://weidian.com/?userid=1693834616" target="_blank"><img src="/data/images/2020-08-19/5f3cb08134015.jpg"></a>-->
-                        <a href="http://localhost/site/siteWeb/data/view/info/reserver.html" class="exhibition-r-block1-a"><b></b>Réservation</a>
+                        <a href="http://localhost/site/siteWeb/data/view/info/reserver.php" class="exhibition-r-block1-a"><b></b>Réservation</a>
                         <a href="http://localhost/site/siteWeb/data/view/info/act.html" class="exhibition-r-block1-b"><b></b>Activité</a>
                         <a href="http://localhost/site/siteWeb/data/view/info/contact.html" class="exhibition-r-block1-c"><b></b>Contact</a>
                     </div>
@@ -141,34 +119,31 @@
 
     <!-- BEGIN FOOTER -->
     <div class="footer">
-
         <div class="footer_h">
-   
-           <ul class="clearfix w1080">
-               <li><a href="/web-info-about">Présentation</a></li>                               
-               <li><a href="/web-info-reserver">Réservation</a></li>                                              
-               <li><a href="/web-info-act">Voyage/Activité</a></li>             
-               <li><a href="/web-info-contact">Contact</a></li>
-           </ul> 
-   
+          <ul class="clearfix w1080">
+              <li><a href="http://localhost/site/siteWeb/data/view/info/about.html">Présentation</a></li>                               
+              <li><a href="http://localhost/site/siteWeb/data/view/info/reserver.php">Réservation</a></li>                                              
+              <li><a href="http://localhost/site/siteWeb/data/view/info/act.html">Voyage/Activité</a></li>             
+              <li><a href="http://localhost/site/siteWeb/data/view/info/contact.html">Contact</a></li> 
+          </ul> 
         </div>
-   
-   
-   
+  
+  
+  
         <div class="w1080">
-            <div class="footer_b clearfix">
-                <div class="footer_b_r fr">
-                    <p>E-Mail：Parisnober@gmail.com</p>
-                    <p>167 rue de la Roquette，75011</p>
-                    <div class="share">
-                        <br>
-                        <br>
-                    </div>
-                     <p class="copyright">Tous droits réservé &copy; à SCI-EUROPE<font style="vertical-align:super;font-size:50%; ">&reg;</font>&nbsp;&nbsp;</p>
-                </div>   
-            </div>
-        </div>
-    </div>
+           <div class="footer_b clearfix">
+               <div class="footer_b_r fr">
+                   <p>E-Mail：Parisnober@gmail.com</p>
+                   <p>167 rue de la Roquette，75011</p>
+                   <div class="share">
+                       <br>
+                       <br>
+                   </div>
+                    <p class="copyright">Tous droits réservé &copy; à SCI-EUROPE<font style="vertical-align:super;font-size:50%; ">&reg;</font>&nbsp;&nbsp;</p>
+               </div>
+           </div>
+       </div>
+      </div>
 
 
 

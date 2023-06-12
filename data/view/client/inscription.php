@@ -16,12 +16,10 @@
         <?php
         $password = $email = $tel = $password2='';
         $emailErr = $passwordErr = '';
-
         $hostname = "localhost";
         $username = "root";
         $password = "";
         $database = "sci";
-
         $conn = new mysqli($hostname, $username, $password, $database);
 
         function test_input($data)
@@ -34,7 +32,6 @@
         ?>
         <div class="login-and-registration-con registration">
             <div class="login-and-registration">
-                <!-- <h1><a href="./"><img src="images/logo.png" height="76" width="157" alt=""></a></h1> -->
                 <form method="post" action="" id="form">
                     <div class="login-and-registration-form">
                         <h2>
@@ -58,8 +55,6 @@
                                 <label class="login-and-registration-icon3"></label><input type="text" placeholder="Télephone" name="tel" required="">
                             </dd>
                         </dl>
-        
-                      
         
                         <div class="self-and-forget">
                            <span class="checkbox_item">
