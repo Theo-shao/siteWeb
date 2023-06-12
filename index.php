@@ -26,26 +26,7 @@
      
     
     
-	<script>
-	var mobileAgent = new Array("iphone", "ipod", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
 
-	var browser = navigator.userAgent.toLowerCase(); 
-	var isMobile = false; 
-	for (var i=0; i<mobileAgent.length; i++)
-	{
-		if( browser.indexOf("ipad") != -1 && browser.indexOf("mobile") != -1 )
-		{
-			break;
-		}
-		else if( browser.indexOf(mobileAgent[i]) != -1 )
-		{
-			isMobile = true;
-			// Reorienter
-			location.href = 'http://w.yhachina.com' ;
-			break; 
-		}
-	}
-	</script>
 </head>
 <body style="filter: gray;">
 <?php
