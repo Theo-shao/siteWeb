@@ -94,22 +94,17 @@
             </div>    
         </div>
         <div style="height:117px;"></div>
-        <input type="hidden" id="qtype" name="qtype" value="">
-        <input type="hidden" id="qhotel" name="qhotel" value="">
-        <input type="hidden" id="qservice" name="qservice" value="">
-        <input type="hidden" id="qdevice" name="qdevice" value="">
-        <input type="hidden" id="qprice" name="qprice" value="">
         <!-- -搜索框- -->
         <div class="list-dp">
             <div class="w1080">
                 <ul class="clearfix">
                     <li class="datalist-input1">
                         <label for="Date_a">Date d'arrivée&nbsp;&nbsp;</label>|
-                        <input id="Date_a" type="text" value="" name="stime">
+                        <input id="Date_a" type="text" value="" name="stime" required="required">
                     </li>
                     <li class="datalist-input2">
                         <label for="Date_b">Date de départ&nbsp;&nbsp;</label>|
-                        <input id="Date_b" type="text" value="" name="etime">
+                        <input id="Date_b" type="text" value="" name="etime" required="required">
                     </li>
                     <li>
                         <button type="submit">Rechercher</button>
