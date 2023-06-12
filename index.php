@@ -138,7 +138,6 @@
                         <dd class="Date_a"><label><input type="text" id="Date_a" name="stime" placeholder="Date d'arrivée" required="required"><b></b></label></dd>
                         <dd class="Date_b"><label><input type="text" id="Date_b" name="etime" placeholder="Date de départ" required="required"><b></b></label></dd>
                         <dd class="date_btn">
-                            
                             <button><a href="http://localhost/site/siteWeb/data/view/info/reserver.php">Rechercher</a></button>
                         </dd>
                     </form>
