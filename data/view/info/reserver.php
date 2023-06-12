@@ -154,16 +154,13 @@
         <div class="w1080">
             <dl class="login-and-registration-dl">
                             <dd>
-                                <label >E-mail：</label><input type="text" placeholder="E-mail（obligatoire）" name="email" required="">
+                                <label >E-mail：</label>
+                                <input type="text" placeholder="E-mail（obligatoire）" name="email" required="">
                             </dd>
                             <dd>
-                                <label >Num_chambre：</label><input type="text" placeholder="" name="num" required="">
+                                <label >Num_chambre：</label>
+                                <input type="text" placeholder="" name="num" required="">
                             </dd>
-        
-                            <!-- <dd class="verification">
-                                <label class="login-and-registration-icon5"></label><input type="text" placeholder="验证码" name="code" autocomplete="off">
-                                <a href="javascript:void(0)" onclick="getcode(this)" title="点击获取或更换验证码">atfn</a>
-                            </dd> -->
             </dl>
         </div>
 
