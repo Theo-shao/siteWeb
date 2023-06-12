@@ -172,6 +172,8 @@
             </dl>
         </div>
         <?php
+                $stime = test_input($_POST["stime"]);
+                $etime = test_input($_POST["etime"]);
                 $emailErr=$email=$num=$tel="";
                 if ($_SERVER["REQUEST_METHOD"] == "POST"){   
                     if (empty($_POST["email"])){
@@ -185,7 +187,7 @@
                             $emailErr = 'Format de boîte aux lettres illégal'; 
                         }
                         else{
-                            $sql = "INSERT INTO `commend`(`id`, `email`, `tele`, `datedepart`, `datefin`, `num_chambre`) VALUES ('1','$email','$tel','$stime','$etime','$num');";
+                            $sql = "INSERT INTO `commend`(`id`, `email`, `tele`, `datedepart`, `datefin`, `num_chambre`) VALUES ('2','$email','$tel','$stime','$etime','$num');";
                             $result = $conn->query($sql);
                             if ($result === false) {
                                 echo $conn->error;
