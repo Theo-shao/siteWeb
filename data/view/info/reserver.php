@@ -141,7 +141,7 @@
                             echo "Toilette: " . $row['toilette'] . ", ";
                             echo "Climatiseur: " . $row['climatiseur'] . "<br>";
                         }
-                        
+                        $result->free_result();
                     }
                 }
             ?>
@@ -191,7 +191,7 @@
                             } else {
                                 echo "Connexion réussie";
                             }
-                            $result->free_result();
+                            
                         }
                         }
                     }
