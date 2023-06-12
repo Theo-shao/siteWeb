@@ -184,6 +184,7 @@
                             $emailErr = 'Format de boîte aux lettres illégal'; 
                         }
                         else{
+                            echo '$stime';
                             $sql = "INSERT INTO commend ( id,  email, tele, datedepart, datefin, num_chambre) VALUES ('3','$email','$tel','$stime','$etime','$num');";
                             $result = $conn->query($sql);
                             if ($result === false) {
