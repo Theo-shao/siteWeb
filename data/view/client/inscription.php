@@ -57,11 +57,6 @@
                             <dd>
                                 <label class="login-and-registration-icon3"></label><input type="text" placeholder="Télephone" name="tel" required="">
                             </dd>
-        
-                            <!-- <dd class="verification">
-                                <label class="login-and-registration-icon5"></label><input type="text" placeholder="验证码" name="code" autocomplete="off">
-                                <a href="javascript:void(0)" onclick="getcode(this)" title="点击获取或更换验证码">atfn</a>
-                            </dd> -->
                         </dl>
         
                       

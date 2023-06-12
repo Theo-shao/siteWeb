@@ -153,14 +153,17 @@
         <div style="height:55px;"></div>
         <div class="w1080">
             <dl>
-                            <dd >
-                                <label style="width:10px;">E-mail：</label>
-                                <input type="text" placeholder="E-mail（obligatoire）" name="email" required="">
-                            </dd>
-                            <dd >
-                                <label >Num_chambre：</label>
-                                <input type="text" placeholder="" name="num" required="">
-                            </dd>
+                <dd >
+                    <label>E-mail：</label>
+                    <input type="text" placeholder="E-mail（obligatoire）" name="email" required="">
+                </dd>
+                <dd >
+                    <label >Num_chambre：</label>
+                    <input type="text" placeholder="" name="num" required="">
+                </dd>
+                <dd>
+                    <button type='submit'>Créer</button>
+                </dd>
             </dl>
         </div>
 
