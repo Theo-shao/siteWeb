@@ -115,10 +115,10 @@
             </div>
         </div>
         <?php
-                $stime = test_input($_POST["stime"]);
-                $etime = test_input($_POST["etime"]);
+                
                 if ($_SERVER["REQUEST_METHOD"] == "POST"){
-                    
+                    $stime = test_input($_POST["stime"]);
+                    $etime = test_input($_POST["etime"]);
                     $sql = "SELECT * from chambres where num NOT IN (SELECT ch.num FROM commend c,chambres ch WHERE ch.num=c.num_chambre and '$stime'<c.datefin ) ;";
                     $result = $conn->query($sql);
         ?>
@@ -127,8 +127,7 @@
             <div class="list-screen-box">
             </div>
             <h3 class="sure-title">
-                <span id="search_cityname">Paris</span>：il reste
-                <font id="search_hotelnum">1</font> chambres à reserver
+                <span id="search_cityname">Paris</span>：
             </h3>
             <div class="can-book-box clearfix">
             <!-- -左栏 旅店搜索列表- -->
