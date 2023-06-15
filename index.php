@@ -34,7 +34,7 @@
 
     $hostname = "localhost";
     $username = "root";
-    $password = "";
+    $password = "shao";
     $database = "sci";
 
     // 创建数据库连接
